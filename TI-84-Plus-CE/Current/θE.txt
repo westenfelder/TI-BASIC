@@ -1,0 +1,190 @@
+Ans→θ
+If θ=0:Goto A
+If θ=0.5:Goto A1
+If θ=1:Goto B
+If θ=2:Goto C
+If θ=3:Goto D
+If θ=4:Goto E
+If θ=5:Goto F
+If θ=6:Goto G
+If θ=7:Goto H
+If θ=8:Goto I
+If θ=9:Goto J
+If θ=10:Goto K
+If θ=11:Goto L
+If θ=12:Goto M
+If θ=13:Goto N
+If θ=14:Goto O
+If θ=15:Goto P
+If θ=16:Goto Q
+Return
+Lbl A1
+Disp "          ELITE₄ 
+Input Str1,Str0
+" "+Str0→Str0
+1→Q
+Lbl A
+If Z≠4:Then
+length(Str0)+length(Str1)-(Q=1)→W
+0→Q
+sub(Str0,2,length(Str0)-1→Str0
+End
+If inString(Str0,"(
+sub(Str0,2,length(Str0)-1→Str0
+If inString(Str0,"]
+sub(Str0,1,length(Str0)-1→Str0
+If Z≠4
+Str1+Str0+"]→Str1
+If Str0="P
+"2,3,5,7,11,13,17,19→Str0
+If Str0="T
+"1,3,6,10,15,21→Str0
+If Str0="O
+"1,3,5,7,9,11,13,15,17,19,21→Str0
+If Str0="E
+"2,4,6,8,10,12,14,16,18,20,22→Str0
+If Str0≠"L₁
+expr("{"+Str0→L₁
+If Str0="L₁
+expr(Str0→L₁
+If inString(Str0,"-
+Then
+inString(Str0,"-→S
+expr(sub(Str0,1,S-1→A
+expr(sub(Str0,S+1,length(Str0)-S→B
+B-A+1→dim(L₁
+For(B,1,dim(L₁)
+A+B-1→L₁(B
+End:End
+If Z=4
+Return
+If W<26 and 26<length(Str1
+Disp " 
+If W<52 and 52<length(Str1
+Disp " 
+If W<78 and 78<length(Str1
+Disp " "
+Return
+Lbl B
+sub(Str0,2,length(Str0)-1→Str0
+If inString(Str0,"(
+sub(Str0,2,length(Str0)-1→Str0
+If inString(Str0,")
+sub(Str0,1,length(Str0)-1→Str0
+Return
+Lbl C
+Input Str1,Str1
+Lbl D
+If Str1=")
+Then
+Stop
+End
+If inString(Str1,")
+sub(Str1,1,length(Str1)-1→Str1
+If Str1="L₁
+Return
+expr("{"+Str1→L₁
+Return
+Lbl E
+ClrHome
+Stop
+Lbl F
+L₁(1→A:L₁(2→B
+
+L₁(3→C
+If 4≤dim(L₁:L₁(4→D
+If 6≤dim(L₁:Then
+L₁(5→E:L₁(6→F:End
+If 8≤dim(L₁:Then
+L₁(7→G:L₁(8→H:End
+Return
+Lbl G
+FnOff 
+PlotsOff 
+SetUpEditor 
+­10→Xmin:10→Xmax:1→Xscl:­10→Ymin:10→Ymax:1→Yscl
+Return
+Lbl H
+startTmr→K
+0→Ś
+Repeat Ś=106
+If Ś=105 or Ś=26 or checkTmr(K)>180
+Return
+If Ś=45
+Then
+ClrDraw:AxesOn 
+Disp 
+9:prgmθE:Z
+Stop
+End:getKey→Ś
+End
+Lbl I
+If inString(Str1,"*
+Then
+inString(Str1,"*→C
+sub(Str1,C+1,length(Str1)-C→Str0
+sub(Str1,1,C-1→Str1
+End
+sub(Str1,1,1)+"("+sub(Str1,2,length(Str1)-1→Str1
+Str1+")→Str1
+Str0+Str1→Str1
+Return
+Lbl J
+DelVar ADelVar BDelVar CDelVar DDelVar EDelVar FDelVar GDelVar HDelVar IDelVar JDelVar KDelVar LDelVar MDelVar NDelVar ODelVar PDelVar QDelVar RDelVar SDelVar TDelVar UDelVar VDelVar WDelVar XDelVar YDelVar θDelVar Str0DelVar Str1DelVar Str2DelVar Str3DelVar Str4DelVar Str5DelVar Str6DelVar ⌊ADelVar ⌊BDelVar ⌊C
+SetUpEditor 
+Return
+Lbl K
+DelVar ADelVar BDelVar CDelVar DDelVar Y₁DelVar Y₂
+Goto J
+Lbl L
+Input "Y=",Str0
+Input "lower ",A
+Input "upper ",B
+Str0→Y₁
+Return
+
+Lbl M
+Input Str1,Str3
+Str1+Str3→Str4
+Str3→Str1
+If Str1=")
+Then
+Stop:End
+Return
+Lbl N
+X²→F
+If F=int(F
+round(F,0→F
+1→E:2→I
+While I²≤F
+While not(fPart(F/I²
+F/I²→F:EI→E
+End
+I+1+(I>2→I
+If I>100
+Return
+End
+Lbl O
+abs(fPart(X→Y:1→Q
+While Y≥­7Q
+Q/Y→Q:fPart(Y→Y
+End
+If 1>fPart(Q
+iPart(Q→Q
+round(Q,0→Q
+round(QX,0→E
+round(Q,0→F
+Return
+Lbl P
+Input Str1+" ",A
+Return
+Lbl Q
+inString(Str0,"[→A
+inString(Str0,"[→A
+sub(Str0,1,A-1→Str1
+expr("{"+sub(Str0,A+1,length(Str0)-A-1→L₁
+Str1+"L₁→Str0
+ClrHome
+Disp "         ELITE₄
+Disp Str0
+Return

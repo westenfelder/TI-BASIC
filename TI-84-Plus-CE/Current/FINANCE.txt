@@ -1,0 +1,74 @@
+{0,0,0,0,0}→L₁
+ClrHome
+Menu("Unknown Variable","Payment Amount",A,"Annual Interest Rate",B,"Present Value",C,"Payment Periods",D,"Future Value",E,"Quit",QQ)
+Lbl QQ
+ClrHome
+Stop
+Lbl A
+1→L₁(4)
+Goto F
+Lbl B
+1→L₁(2)
+Goto F
+Lbl C
+1→L₁(3)
+Goto F
+Lbl D
+1→L₁(1)
+Goto F
+Lbl E
+1→L₁(5)
+Goto F
+Lbl F
+If not(L₁(1))
+Then
+Input "Payment Periods:",Ś
+End
+If not(L₁(2))
+Then
+Input "Annual Interest Rate:",I%
+End
+If not(L₁(3))
+Then
+Input "Present Value:",PV
+End
+If not(L₁(4))
+Then
+Input "Payment Amount:",PMT
+End
+If not(L₁(5))
+Then
+Input "Future Value:",FV
+End
+Input "Payments/Year:",P/Y
+Input "Compound Periods/Year:",C/Y
+If L₁(4)
+Then
+tvm_Pmt(Ś,I%,PV,FV,P/Y,C/Y)→A
+Disp "Payment Amount:"
+Pause A
+End
+If L₁(2)
+Then
+tvm_I%(Ś,PV,PMT,FV,P/Y,C/Y)→B
+Disp "Annual Interest Rate:"
+Pause B
+End
+If L₁(3)
+Then
+tvm_PV(Ś,I%,PMT,FV,P/Y,C/Y)→C
+Disp "Present Value:"
+Pause C
+End
+If L₁(1)
+Then
+tvm_Ś(I%,PV,PMT,FV,P/Y,C/Y)→D
+Disp "Payment Periods:"
+Pause D
+End
+If L₁(5)
+Then
+tvm_FV(Ś,I%,PV,PMT,P/Y,C/Y)→E
+Disp "Future Value:"
+Pause E
+End

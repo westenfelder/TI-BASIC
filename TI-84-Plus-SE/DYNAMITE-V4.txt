@@ -1,0 +1,415 @@
+:
+102→P
+102→A
+102→S
+102→W
+
+
+ClrDraw
+StorePic 0
+Degree
+ClrHome
+ClrDraw
+AxesOff
+ZStandard
+
+
+Horizontal ­10
+Horizontal ­9.75
+Horizontal 9.75
+Horizontal 10
+Vertical ­10
+Vertical ­9.75
+Vertical 10
+Vertical 9.75
+Horizontal 6.5
+Horizontal 6.25
+Pt-On(9.57,8.06)
+Pt-On(9.57,8.39)
+Pt-On(9.57,7.74)
+Pt-On(­9.57,8.06)
+Pt-On(­9.57,8.39)
+Pt-On(­9.57,7.74)
+Pt-On(9.36,8.06)
+Pt-On(9.36,8.39)
+Pt-On(9.36,7.74)
+Pt-On(­9.36,8.06)
+Pt-On(­9.36,8.39)
+Pt-On(­9.36,7.74)
+Pt-On(9.15,8.06)
+Pt-On(9.15,8.39)
+Pt-On(9.15,7.74)
+Pt-On(­9.15,8.06)
+Pt-On(­9.15,8.39)
+Pt-On(­9.15,7.74)
+Pt-On(8.94,8.06)
+Pt-On(8.94,8.39)
+Pt-On(8.94,7.74)
+Pt-On(­8.94,8.06)
+Pt-On(­8.94,8.39)
+Pt-On(­8.94,7.74)
+Pt-On(8.72,8.06)
+Pt-On(8.72,8.39)
+Pt-On(8.72,7.74)
+Pt-On(­8.72,8.06)
+Pt-On(­8.72,8.39)
+Pt-On(­8.72,7.74)
+Pt-On(8.51,8.06)
+Pt-On(8.51,8.39)
+Pt-On(8.51,7.74)
+Pt-On(­8.51,8.06)
+Pt-On(­8.51,8.39)
+Pt-On(­8.51,7.74)
+Pt-On(8.3,8.06)
+Pt-On(8.3,8.39)
+Pt-On(8.3,7.74)
+Pt-On(­8.3,8.06)
+Pt-On(­8.3,8.39)
+Pt-On(­8.3,7.74)
+Pt-On(8.09,8.06)
+Pt-On(8.09,8.39)
+Pt-On(8.09,7.74)
+Pt-On(­8.09,8.06)
+Pt-On(­8.09,8.39)
+Pt-On(­8.09,7.74)
+
+
+Text(3,11,"DYNAMITE TERMINAL V4")
+Text(53,22,"MADE BY FINN W")
+Text(15,5,"1: HOME")
+Text(25,5,"2: MATH")
+Text(35,5,"3: CODING")
+Text(45,5,"4: HELP")
+Text(15,50,"5: MEMORY")
+Text(25,50,"6: LOCK")
+Text(35,50,"7: SETLOCK")
+Text(45,50,"8: FLAPBIRD")
+StorePic 0
+
+
+Lbl A
+Float
+Degree
+ClrHome
+RecallPic 0
+
+Lbl B
+Text(24,30,"   ")
+Text(44,82,"   ")
+Text(14,30,"▫")
+getKey
+If Ans=92
+Goto Z
+If Ans=93
+Goto Y
+If Ans=94
+Goto X
+If Ans=82
+Goto W
+If Ans=83
+Goto V
+If Ans=84
+Goto U
+If Ans=72
+Goto T
+If Ans=73
+Goto S
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto I
+If Ans=105
+Goto Z
+If Ans≠34
+Goto B
+
+
+Lbl C
+Text(34,45,"   ")
+Text(14,30,"   ")
+Text(24,30,"▫")
+getKey
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto B
+If Ans=105
+Goto Y
+If Ans≠34
+Goto C
+
+
+Lbl D
+Text(44,29,"   ")
+Text(24,30,"   ")
+Text(34,45,"▫")
+getKey
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto C
+If Ans=105
+Goto X
+If Ans≠34
+Goto D
+
+
+Lbl E
+Text(14,83,"   ")
+Text(34,45,"   ")
+Text(44,29,"▫"
+getKey
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto D
+If Ans=105
+Goto W
+If Ans≠34
+Goto E
+
+
+Lbl F
+Text(24,75,"   ")
+Text(44,29,"   ")
+Text(14,83,"▫")
+getKey
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto E
+If Ans=105
+Goto V
+If Ans≠34
+Goto F
+
+
+Lbl G
+Text(14,83,"   ")
+Text(34,86,"   ")
+Text(24,75,"▫")
+getKey
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto F
+If Ans=105
+Goto U
+If Ans≠34
+Goto G
+
+
+Lbl H
+Text(24,75,"   ")
+Text(44,82,"   ")
+Text(34,86,"▫")
+getKey
+If Ans=31
+Goto ZZ
+If Ans=105
+Goto T
+If Ans=25
+Goto G
+If Ans≠34
+Goto H
+
+
+Lbl I
+Text(14,30,"   ")
+Text(34,86,"   ")
+Text(44,82,"▫")
+getKey
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto H
+If Ans=105
+Goto S
+If Ans≠34
+Goto I
+Goto B
+
+FLAPBIRD
+Lbl S
+ClrHome
+prgmFLAPBIRD
+Goto A
+
+SETLOCK
+Lbl T6
+ClrDraw
+Text(28,34,"TRY AGAIN")
+cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(8
+Lbl T
+ClrDraw
+Text(30,25,"ENTER PASSCODE")
+Text(20,39,"LOCKED")
+Lbl T1
+getKey
+Ans→X
+If Ans≠0
+Text(40,32,"*")
+If Ans=0
+Goto T1
+Lbl T2
+getKey
+Ans→Y
+If Ans≠0
+Text(40,42,"*")
+If Ans=0
+Goto T2
+Lbl T3
+getKey
+Ans→Z
+If Ans≠0
+Text(40,52,"*")
+If Ans=0
+Goto T3
+Lbl T4
+getKey
+Ans→θ
+If Ans≠0
+Text(40,62,"*")
+If Ans=0
+Goto T4
+Lbl T5
+cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(8
+If X+Y+Z+θ=P+A+S+W
+Then
+Goto Tθ
+Else
+Goto T6
+Lbl Tθ
+ClrDraw
+Text(30,28,"SET PASSWORD")
+Lbl TZ
+getKey
+Ans→P
+If Ans≠0
+Text(40,32,"*")
+If Ans=0
+Goto TZ
+Lbl TY
+getKey
+Ans→A
+If Ans≠0
+Text(40,42,"*")
+If Ans=0
+Goto TY
+Lbl TX
+getKey
+Ans→S
+If Ans≠0
+Text(40,52,"*")
+If Ans=0
+Goto TX
+Lbl TW
+getKey
+Ans→W
+If Ans≠0
+Text(40,62,"*")
+If Ans=0
+Goto TW
+cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(8
+ClrDraw
+Goto A
+
+LOCK
+Lbl U6
+ClrDraw
+Text(28,34,"TRY AGAIN")
+cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(8
+Lbl U
+ClrDraw
+Lbl U1
+Text(30,25,"ENTER PASSCODE")
+Text(20,39,"LOCKED")
+getKey
+Ans→X
+If Ans≠0
+Text(40,32,"*")
+If Ans=0
+Goto U1
+Lbl U2
+getKey
+Ans→Y
+If Ans≠0
+Text(40,42,"*")
+If Ans=0
+Goto U2
+Lbl U3
+getKey
+Ans→Z
+If Ans≠0
+Text(40,52,"*")
+If Ans=0
+Goto U3
+Lbl U4
+getKey
+Ans→θ
+If Ans≠0
+Text(40,62,"*")
+If Ans=0
+Goto U4
+Lbl U5
+cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(cos(8
+If X+Y+Z+θ=P+A+S+W
+Then
+ClrDraw
+Goto A
+Else
+Goto U6
+
+MEMORY
+Lbl V
+ClrHome
+Disp ""
+Disp ""
+Disp "  CLEAR VALUES"
+Disp "      AND"
+Disp "   ERASE RAM?"
+Pause 
+ClrHome
+Menu(" RESET MEMORY ","YES",V1,"NO",V2)
+Lbl V2
+ClrDraw
+Goto A
+Lbl V1
+Asm(prgmZYNAMITE)
+
+HELP
+Lbl W
+Pause 
+Goto A
+
+CODING
+Lbl X
+ClrHome
+Disp "PRESS KEY"
+Lbl S1
+getKey
+Ans→X
+If Ans=0
+Goto S1
+Disp X
+Pause 
+Menu(" AGAIN ","YES",S,"NO",A)
+
+MATH
+Lbl Y
+ClrHome
+prgmTIPTRICK
+Goto A
+
+HOME
+Lbl Z
+ClrHome
+
+
+Lbl ZZ
+ClrDraw
+Degree
+Float
+AxesOn 
+ZStandard
+ClrHome

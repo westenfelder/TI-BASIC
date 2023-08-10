@@ -1,0 +1,30 @@
+ClrDraw
+ClrHome
+BackgroundOff
+MATHPRINT
+TextColor(BLACK)
+Normal
+Float
+Radian
+Func
+Thick
+Sequential
+Real
+Full
+PlotsOff 
+FnOff 
+ZStandard
+nd
+AUTO
+DiagnosticOn
+STATWIZARD ON
+RectGC
+CoordOn
+GridOff
+AxesOn BLACK
+ZStandard
+LabelOff
+ExprOn
+BorderColor 4
+DetectAsymOn
+ClrHome

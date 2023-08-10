@@ -1,0 +1,30 @@
+ClrHome
+Input "Principle: ",P
+Input "% Rate: ",R
+Input "Years: ",T
+R/100→R
+Menu("Compounded:","Annually",A,"Quarterly",B,"Monthly",C,"Weekly",D,"Daily",E,"Twice daily",F,"Continuously",G)
+Lbl A
+Disp "Value:",P(1+R)^T
+Goto H
+Lbl B
+Disp "Value:",P(1+(R/4))^(4*T)
+Goto H
+Lbl C
+Disp "Value:",P(1+(R/12))^(12*T)
+Goto H
+Lbl D
+Disp "Value:",P(1+(R/52.18))^(52.18*T)
+Goto H
+Lbl E
+Disp "Value:",P(1+(R/365.25))^(365.25*T)
+Goto H
+Lbl F
+Disp "Value:",P(1+(R/720.5))^(720.5*T)
+Goto H
+Lbl G
+Disp "Value:",P^(R*T)
+Goto H
+Lbl H
+Pause 
+Return

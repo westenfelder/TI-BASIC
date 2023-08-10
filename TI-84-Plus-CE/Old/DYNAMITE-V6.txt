@@ -1,0 +1,490 @@
+:
+ClrHome
+RecallGDB 0
+BackgroundOn WHITE
+ClrDraw
+Degree
+ClrHome
+ClrDraw
+AxesOff
+ZStandard
+BorderColor 4
+
+If θ=5
+Then
+RecallPic 0
+Goto A
+Else
+StorePic 0
+Goto AA
+
+Lbl AA
+
+ClrDraw
+Degree
+ClrHome
+ClrDraw
+AxesOff
+ZStandard
+BorderColor 4
+
+Horizontal ­10,BLACK
+Horizontal ­9.9,BLACK
+Horizontal ­9.8,BLACK
+Horizontal 9.8,BLACK
+Horizontal 9.9,BLACK
+Horizontal 10,BLACK
+Vertical ­10,BLACK
+Vertical ­9.9,BLACK
+Vertical ­9.8,BLACK
+Vertical 9.8,BLACK
+Vertical 9.9,BLACK
+Vertical 10,BLACK
+Horizontal 6.5,BLACK
+Horizontal 6.25,BLACK
+
+Pt-On(9.6,8.0,BLACK)
+Pt-On(9.6,8.4,BLACK)
+Pt-On(9.6,7.7,BLACK)
+Pt-On(­9.6,8.0,BLACK)
+Pt-On(­9.6,8.4,BLACK)
+Pt-On(­9.6,7.7,BLACK)
+Pt-On(9.4,8.0,BLACK)
+Pt-On(9.4,8.4,BLACK)
+Pt-On(9.4,7.7,BLACK)
+Pt-On(­9.4,8.0,BLACK)
+Pt-On(­9.4,8.4,BLACK)
+Pt-On(­9.4,7.7,BLACK)
+Pt-On(9.2,8.0,BLACK)
+Pt-On(9.2,8.4,BLACK)
+Pt-On(9.2,7.7,BLACK)
+Pt-On(­9.2,8.0,BLACK)
+Pt-On(­9.2,8.4,BLACK)
+Pt-On(­9.2,7.7,BLACK)
+Pt-On(9.0,8.0,BLACK)
+Pt-On(9.0,8.4,BLACK)
+Pt-On(9.0,7.7,BLACK)
+Pt-On(­9.0,8.0,BLACK)
+Pt-On(­9.0,8.4,BLACK)
+Pt-On(­9.0,7.7,BLACK)
+Pt-On(8.8,8.0,BLACK)
+Pt-On(8.8,8.4,BLACK)
+Pt-On(8.8,7.7,BLACK)
+Pt-On(­8.8,8.0,BLACK)
+Pt-On(­8.8,8.4,BLACK)
+Pt-On(­8.8,7.7,BLACK)
+Pt-On(8.6,8.0,BLACK)
+Pt-On(8.6,8.4,BLACK)
+Pt-On(8.6,7.7,BLACK)
+Pt-On(­8.6,8.0,BLACK)
+Pt-On(­8.6,8.4,BLACK)
+Pt-On(­8.6,7.7,BLACK)
+Pt-On(8.4,8.0,BLACK)
+Pt-On(8.4,8.4,BLACK)
+Pt-On(8.4,7.7,BLACK)
+Pt-On(­8.4,8.0,BLACK)
+Pt-On(­8.4,8.4,BLACK)
+Pt-On(­8.4,7.7,BLACK)
+Pt-On(8.2,8.0,BLACK)
+Pt-On(8.2,8.4,BLACK)
+Pt-On(8.2,7.7,BLACK)
+Pt-On(­8.2,8.0,BLACK)
+Pt-On(­8.2,8.4,BLACK)
+Pt-On(­8.2,7.7,BLACK)
+Pt-On(8.0,8.0,BLACK)
+Pt-On(8.0,8.4,BLACK)
+Pt-On(8.0,7.7,BLACK)
+Pt-On(­8.0,8.0,BLACK)
+Pt-On(­8.0,8.4,BLACK)
+Pt-On(­8.0,7.7,BLACK)
+
+TextColor(RED)
+Text(8,50,"DYNAMITE TERMINAL V6")
+
+TextColor(LTBLUE)
+Text(145,80,"MADE BY FINN W")
+
+TextColor(BLACK)
+Text(40,30,"1: HOME")
+Text(65,30,"2: NOTES")
+Text(90,30,"3: MATH")
+Text(115,30,"4: HELP")
+Text(40,130,"5: SETTINGS")
+Text(65,130,"6: LOCK")
+Text(90,130,"7: CODING")
+Text(115,130,"8: GAMES")
+StorePic 0
+5→θ
+
+TextColor(BLUE)
+
+Lbl A
+Float
+Degree
+RecallPic 0
+
+Lbl B
+Text(63,20,"   ")
+Text(113,120,"   ")
+Text(38,20,"▫")
+getKey
+If Ans=92
+Goto ZZ
+If Ans=93
+Goto Y
+If Ans=94
+Goto X
+If Ans=82
+Goto W
+If Ans=83
+Goto V
+If Ans=84
+Goto U
+If Ans=72
+Goto T
+If Ans=73
+Goto S
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto I
+If Ans=105
+Goto ZZ
+If Ans≠34
+Goto B
+
+
+Lbl C
+Text(88,20,"   ")
+Text(38,20,"   ")
+Text(63,20,"▫")
+getKey
+If Ans=92
+Goto ZZ
+If Ans=93
+Goto Y
+If Ans=94
+Goto X
+If Ans=82
+Goto W
+If Ans=83
+Goto V
+If Ans=84
+Goto U
+If Ans=72
+Goto T
+If Ans=73
+Goto S
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto B
+If Ans=105
+Goto Y
+If Ans≠34
+Goto C
+
+
+Lbl D
+Text(113,20,"   ")
+Text(63,20,"   ")
+Text(88,20,"▫")
+getKey
+If Ans=92
+Goto ZZ
+If Ans=93
+Goto Y
+If Ans=94
+Goto X
+If Ans=82
+Goto W
+If Ans=83
+Goto V
+If Ans=84
+Goto U
+If Ans=72
+Goto T
+If Ans=73
+Goto S
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto C
+If Ans=105
+Goto X
+If Ans≠34
+Goto D
+
+
+Lbl E
+Text(38,120,"   ")
+Text(88,20,"   ")
+Text(113,20,"▫"
+getKey
+If Ans=92
+Goto ZZ
+If Ans=93
+Goto Y
+If Ans=94
+Goto X
+If Ans=82
+Goto W
+If Ans=83
+Goto V
+If Ans=84
+Goto U
+If Ans=72
+Goto T
+If Ans=73
+Goto S
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto D
+If Ans=105
+Goto W
+If Ans≠34
+Goto E
+
+
+Lbl F
+Text(63,120,"   ")
+Text(113,20,"   ")
+Text(38,120,"▫")
+getKey
+If Ans=92
+Goto ZZ
+If Ans=93
+Goto Y
+If Ans=94
+Goto X
+If Ans=82
+Goto W
+If Ans=83
+Goto V
+If Ans=84
+Goto U
+If Ans=72
+Goto T
+If Ans=73
+Goto S
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto E
+If Ans=105
+Goto V
+If Ans≠34
+Goto F
+
+
+Lbl G
+Text(88,120,"   ")
+Text(38,120,"   ")
+Text(63,120,"▫")
+getKey
+If Ans=92
+Goto ZZ
+If Ans=93
+Goto Y
+If Ans=94
+Goto X
+If Ans=82
+Goto W
+If Ans=83
+Goto V
+If Ans=84
+Goto U
+If Ans=72
+Goto T
+If Ans=73
+Goto S
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto F
+If Ans=105
+Goto U
+If Ans≠34
+Goto G
+
+
+Lbl H
+Text(113,120,"   ")
+Text(63,120,"   ")
+Text(88,120,"▫")
+getKey
+If Ans=92
+Goto ZZ
+If Ans=93
+Goto Y
+If Ans=94
+Goto X
+If Ans=82
+Goto W
+If Ans=83
+Goto V
+If Ans=84
+Goto U
+If Ans=72
+Goto T
+If Ans=73
+Goto S
+If Ans=31
+Goto ZZ
+If Ans=105
+Goto T
+If Ans=25
+Goto G
+If Ans≠34
+Goto H
+
+
+Lbl I
+Text(88,120,"   ")
+Text(38,20,"   ")
+Text(113,120,"▫")
+getKey
+If Ans=92
+Goto ZZ
+If Ans=93
+Goto Y
+If Ans=94
+Goto X
+If Ans=82
+Goto W
+If Ans=83
+Goto V
+If Ans=84
+Goto U
+If Ans=72
+Goto T
+If Ans=73
+Goto S
+If Ans=31
+Goto ZZ
+If Ans=25
+Goto H
+If Ans=105
+Goto S
+If Ans≠34
+Goto I
+Goto B
+
+GAMES
+Lbl S
+ClrHome
+Menu(" GAMES ","FLAPPY BIRD",P1,"PACMAN",P2,"1010",P3,"SUDOKU",P4,"SPACE INVADERS",P5,"EXIT",P6)
+
+Lbl P1
+ClrHome
+Asm(prgmZFLAP)
+ClrDraw
+Goto S
+
+Lbl P2
+ClrHome
+Asm(prgmZPACMAN)
+ClrDraw
+Goto S
+
+Lbl P3
+ClrHome
+Asm(prgmZ1010)
+ClrDraw
+Goto S
+
+Lbl P4
+ClrHome
+prgmZSUDOKU
+ClrDraw
+Goto S
+
+Lbl P5
+ClrHome
+Asm(prgmZSPACE)
+ClrDraw
+Goto S
+
+Lbl P6
+ClrHome
+ClrDraw
+Goto AA
+
+
+
+CODING
+Lbl T
+ClrDraw
+ClrHome
+Disp "QUICK EDIT"
+Pause 
+ClrDraw
+Goto AA
+
+LOCK
+Lbl U
+ClrHome
+Disp "QUICK EDIT"
+Pause 
+ClrHome
+ClrDraw
+Goto AA
+
+
+SETTINGS
+Lbl V
+ClrHome
+Disp "QUICK EDIT"
+Pause 
+ClrHome
+ClrDraw
+Goto AA
+
+
+HELP
+Lbl W
+ClrHome
+ClrDraw
+prgmZHELP
+Goto A
+
+
+CLOCK
+Lbl X
+ClrHome
+prgmZCLOCK
+ClrDraw
+Goto AA
+
+MATH
+Lbl Y
+ClrHome
+ClrDraw
+Menu(" MATH PROGRAMS ","FORMULAS",Y4,"(OLD)TIPTRICK",Y1,"MORE...",Y3,"EXIT",Y2)
+Lbl Y1
+prgmZMATH
+Goto Y
+Lbl Y3
+ClrHome
+Disp "   FIND MORE PROGRAMS AT"
+Disp "        TICALC.ORG"
+Pause 
+Goto Y
+Lbl Y4
+prgmZFORMS
+Pause 
+Goto Y
+Lbl Y2
+Goto A
+
+
+Lbl ZZ
+ClrDraw
+Degree
+Float
+ZStandard
+BackgroundOn WHITE
+AxesOn BLACK
+DispGraph
+ClrHome

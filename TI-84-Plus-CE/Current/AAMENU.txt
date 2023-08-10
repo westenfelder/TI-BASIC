@@ -1,0 +1,125 @@
+ClrHome
+Lbl AA
+Menu(" Finn's Programs ","Math",1,"Science",5,"Finance",8,"Notes",2,"Games",3,"Reset",4,"Exit",ZZ)
+
+
+Lbl 1
+Menu("Math Programs","Algebra",AL,"Geometry",G1,"Calculus",B,"Statistics",ST,"MathCounts",C,"Main",AA)
+
+Lbl 2
+Asm(prgmNOTES
+Goto ZZ
+
+Lbl 3
+Menu("Games","Solitare",G,"Pac-Man",H,"Flappy Bird",I,"Chess",J,"Main",AA)
+
+Lbl 4
+prgmRESET
+Goto ZZ
+
+Lbl 5
+Menu("Science Programs","Periodic Table",Q1,"SciTools",Q1,"Chemistry",Q3,"Physics",Q4,"Main",AA)
+
+Lbl 8
+Menu("Finance Programs","Financial Calculator",F1,"Interest",IN,"Finance Variables",Q1,"Main",AA)
+
+Lbl AL
+Menu("Algebra","Prime Factor",PF,"Factor",FA,"Quadratic",QA,"Inequalities",Q1,"Polynomial Solver",Q1,"Series Solver",SS,"Base Converter",BC,"Back",1)
+
+
+Lbl G1
+Menu("Geometry","Formulas",GT,"Triangle Solver",MI,"Trig IDs",TG,"Unit Circle",UC,"Conics",Q1,"Back",1)
+
+Lbl Q1
+Disp "In Apps"
+Wait 1
+Goto ZZ
+
+
+Lbl PF
+prgmPRIMES
+Disp "Done"
+Pause 
+Goto ZZ
+Lbl FA
+prgmFACTOR
+Goto ZZ
+Lbl QA
+prgmQUAD
+Goto ZZ
+Lbl SS
+prgmSERIES
+Goto ZZ
+Lbl BC
+prgmBASECONV
+Goto ZZ
+
+
+Lbl F1
+prgmFINANCE
+Pause 
+Goto ZZ
+Lbl IN
+prgmINTEREST
+Goto ZZ
+
+
+Lbl ST
+prgmSTATS
+Goto ZZ
+Lbl B
+prgmCALCULUS
+Goto ZZ
+
+
+Lbl GT
+prgmGEOMETRY
+Goto ZZ
+Lbl UC
+prgmUNTCRCLE
+Goto ZZ
+Lbl MI
+prgmTRIANGLE
+Goto ZZ
+Lbl TG
+prgmTRIGIDS
+Goto ZZ
+
+
+Lbl C
+prgmMATHCNTS
+Goto ZZ
+
+
+Lbl Q3
+prgmCHEM
+Goto ZZ
+Lbl Q4
+prgmPHYSICS
+Goto ZZ
+
+
+Lbl G
+Asm(prgmSOLITARE
+Goto ZZ
+Lbl H
+Asm(prgmPACMAN
+Goto ZZ
+Lbl I
+Asm(prgmFLAPBIRD
+Goto ZZ
+Lbl J
+Asm(prgmCHESS
+Goto ZZ
+
+
+Lbl ZZ
+Goto 22
+ClrHome
+Output(1,7,"TI-84 Plus CE"
+Output(2,9,"5.3.1.0058"
+Output(8,8,"MEM Cleared"
+Pause 
+Lbl 22
+ClrHome
+Asm(prgmZD

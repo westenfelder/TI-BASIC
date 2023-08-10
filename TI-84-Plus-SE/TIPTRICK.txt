@@ -1,0 +1,241 @@
+:
+Lbl AB
+ClrHome
+Menu(" TIPS TRICKS V4 ","ANGLES",1,"SLOPE",2,"DIAGONALS",3,"LINE",4,"PFACTOR",5,"FACTADD",6,"NEXT",7)
+Lbl 1
+Menu(" ANGLES ","EXTERIOR",A,"INTERIOR",B)
+Lbl A
+ClrHome
+Input "SIDES:",A
+360/A→A
+Disp A
+Pause 
+Goto ZZ
+Lbl B
+ClrHome
+Input "SIDES:",A
+360/A→A
+180-A→A
+Disp A
+Pause 
+Goto ZZ
+Lbl 2
+ClrHome
+Menu(" SLOPE ","POINTSLOPE",AA,"2 POINTS",BB)
+Lbl AA
+ClrHome
+Input "X:",X
+Input "Y:",Y
+Input "SLOPE:",A
+Lbl XX
+
+(Y-(A*X))→B
+B/A→C
+ClrHome
+Disp "SLOPE,XINT,YINT"
+Pause 
+Disp A
+Pause 
+Disp C
+Pause 
+Disp B
+Pause 
+Goto ZZ
+Lbl BB
+Input "X:",X
+Input "Y:",Y
+Input "A:",A
+Input "B:",B
+(B-Y)/(A-X)→A
+Goto XX
+Lbl 3
+ClrHome
+Input "SIDES:",A
+A(A-3)/2→A
+Disp A
+Pause 
+Goto ZZ
+Lbl 4
+Menu(" LINE ","SLOPE",2,"PERPENDICULAR",33,"PARALLEL",34,"DISTFORM",35)
+Lbl 33
+ClrHome
+Disp "NEGATIVE"
+Disp "RECIPRICAL"
+Pause 
+Goto ZZ
+Lbl 34
+ClrHome
+Disp "DIFFERENT"
+Disp "Y INTERCEPT"
+Pause 
+Goto ZZ
+Lbl 35
+ClrHome
+Input "X:",X
+Input "Y:",Y
+Input "A:",A
+Input "B:",B
+√(((A-X)²)+((B-Y)²))→C
+Disp "DISTANCE"
+Disp C
+Pause 
+Goto ZZ
+Lbl 5
+ClrHome
+{1}→⌊LP
+2→C:1→D
+Prompt A
+Lbl Z
+If A=1
+Goto F
+If fPart(A/2)=0
+Then
+C→⌊LP(D):D+1→D
+A/C→A:Goto Z
+End
+For(C,3,√(A),2)
+If fPart(A/C)=0
+Then
+C→⌊LP(D):D+1→D
+A/C→A:Goto Z
+End:End
+A→⌊LP(D):Lbl F
+Disp ⌊LP
+Pause 
+Goto ZZ
+Lbl 6
+Input ":",A
+((A(A+1))/2)→B
+Disp B
+Pause 
+Goto ZZ
+Lbl 7
+Menu(" TIPS TRICKS V4 ","PERCENT",8,"SHAPES",12,"PROB",13,"TRIANGLE",15,"QUADRATIC",16,"REMAINDER",17,"NEXT",14)
+Lbl 8
+ClrHome
+Input "NUMBER:",A
+Input "PERCENT:",B
+A*(B/100)→C
+Disp C
+Pause 
+Goto ZZ
+Lbl 12
+ClrHome
+Menu(" SHAPES ","AREA",OL,"VOLUME",ON,"SURPH AREA",OO)
+Lbl OL
+ClrHome
+Lbl ON
+ClrHome
+Lbl OO
+ClrHome
+Goto ZZ
+Lbl 13
+Menu(" PROBABILITY ","COMBINATION",G6,"PERMUTATION",G7)
+Lbl G6
+ClrHome
+Disp "ORDER MATTERS"
+Input ":",A
+Disp "CHOOSE"
+Input ":",B
+
+
+
+
+
+
+
+
+Goto ZZ
+Lbl G7
+ClrHome
+Disp "ORDER DOESNT"
+Disp "MATTER"
+Input ":",A
+Disp "CHOOSE"
+Input ":",B
+(A!)/((B!)(A-B)!)→X
+ClrHome
+Disp X
+Pause 
+Goto ZZ
+Lbl 14
+Menu(" TIPS TRICKS V4 ","BACK",AB,"DONE",CF)
+Lbl 15
+Menu(" TRIANGLE ","PATHAG",B6,"TRIG",B7)
+Lbl B6
+ClrHome
+Menu(" SOLVE FOR ","LEG",QR,"HYPOTENUSE",QS)
+Lbl QR
+ClrHome
+Input "HYPOTENUSE:",A
+Input "LEG:",B
+A²-B²→C
+√(C)→C
+Disp C
+Pause 
+Goto ZZ
+Lbl QS
+ClrHome
+Input "LEG:",A
+Input "LEG:",B
+A²+B²→C
+√(C)→C
+Disp C
+Pause 
+Goto ZZ
+Lbl B7
+ClrHome
+Menu(" TRIG ","LAW SINES",M2,"LAW COSINES",M3)
+Lbl M2
+ClrHome
+
+
+
+Goto ZZ
+Lbl M3
+ClrHome
+
+
+
+
+
+
+Goto ZZ
+Lbl 16
+ClrHome
+Disp "AX²+BX+C=0
+Input "A:",A
+Input "B:",B
+Input "C:",C
+((­B)+√((B²)-(4*A*C)))/(2*A)→X
+((­B)-√((B²)-(4*A*C)))/(2*A)→Y
+ClrHome
+Disp "X="
+Disp X
+Disp "OR"
+Disp Y
+Pause 
+Goto ZZ
+Lbl 17
+ClrHome
+Input ":",A
+Disp "DIVIDED BY"
+Input ":",B
+remainder(A,B)→C
+ClrHome
+Disp "REMAINDER"
+Disp C
+Pause 
+Goto ZZ
+Lbl ZZ
+Menu(" AGAIN ","YES",XY,"NO",CF)
+Lbl XY
+Goto AB
+Lbl CF
+ClrHome
+Disp "  MADE BY FINN"
+Disp "SPECIAL THANKS TO"
+Disp "JOHN GRAHM"
+Disp "AND THE 2015"
+Disp "WINNING MATHCOUNTS"
+Disp "STATE TEAM"

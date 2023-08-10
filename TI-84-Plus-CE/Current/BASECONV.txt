@@ -1,0 +1,43 @@
+"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz→Str1
+ClrHome
+Disp "Base Converter"
+Disp "
+DelVar NInput "Number:",Str2
+Input "Original Base:",M
+length(Str2)-1→P
+For(I,1,length(Str2
+inString(Str1,sub(Str2,I,1→A
+If A>M or not(A
+Then
+Disp "Base Input Error
+Return
+End
+(A-1)M^P+N→N
+P-1→P
+End
+If N≥10
+Disp "Possible Loss of Precision"
+Input "New Base:",B
+0→dim(⌊BASE
+DelVar PRepeat (B-1)B^P≥N
+P+1→P
+End
+Repeat P<0
+int(N/B^P→D
+N-DB^P→N
+D→⌊BASE(1+dim(⌊BASE
+P-1→P
+End
+"0→Str2
+For(I,1,dim(⌊BASE
+Str2+sub(Str1,⌊BASE(I)+1,1→Str2
+End
+Repeat sub(Str2,1,1)≠"0
+sub(Str2,2,length(Str2)-1→Str2
+End
+DelVar ⌊BASE
+DelVar Str1
+Disp "
+Disp "New String:"
+Pause Str2
+DelVar Str2

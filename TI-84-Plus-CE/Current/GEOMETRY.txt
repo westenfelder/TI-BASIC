@@ -1,0 +1,215 @@
+Float
+ClrHome
+0→T:0→U
+
+
+Lbl 0
+Menu("Geometry","Area",A,"Volume",B,"Surface Area",C,"Exit",ZZ
+
+
+Lbl A
+Menu("Area","Triangles",A1,"Parallelogram",A2,"Trapezoid",A3,"Regular N-Gon",A4,"Circle",A5,"Ellipse",A6,"Rhombus",A7,"Main",0
+
+
+Lbl B
+Menu("Volume","Prism",B1,"Pyramid",B2,"Cylinder",B3,"Cone",B4,"Sphere",B5,"Frustum",B6,"Base to Point",B7,"Main",0
+
+
+Lbl C
+Menu("Surface Area","Cube",C1,"Prism",C2,"Cylinder",C3,"Cone",C4,"Sphere",C5,"Hemisphere",C6,"Main",0
+
+
+Lbl A1
+Menu("Triangle","Base, Height",GL,"Equilateral",GH
+Lbl GL
+Disp "Area=BH/2
+Prompt B,H
+BH/2→Z
+Goto ST
+Lbl GH
+Disp "Area=X²(√(3)/4)"
+Prompt X
+X²(√(3)/4)→Z
+Goto ST
+
+
+Lbl A2
+Disp "A=BH
+Prompt B,H
+BH→Z
+Goto ST
+
+
+Lbl A3
+Disp "A=(B₁+B₂)H/2
+Input "B₁=",A
+Input "B₂=",B
+Input "H=",H
+(A+B)H/2→Z:1→T
+Goto ST
+
+
+Lbl A4
+Degree
+Disp "       POLYGON AREA
+Input "SIDES=",A
+Input "LENGTH=",B
+AB²/(4tan(180/A))→Z
+Goto ST
+
+
+Lbl A5
+Disp "A=πR²
+Prompt R
+(π*R²)→Z
+­1→T
+Goto SU
+
+
+Lbl A6
+Disp "A=πab
+Input "a=",A
+Input "b=",B
+πAB→Z
+Goto SU
+
+
+Lbl A7
+Disp "A=D1D2/2
+Input "D1:",A
+Input "D2:",B
+(A*B)/2→Z
+Goto ST
+
+
+Lbl B1
+Disp "V=LWH
+Prompt L,W,H
+LWH→Z:1→T
+Goto ST
+
+
+Lbl B2
+Disp "V=BH/3
+Prompt B,H
+BH/3→Z
+Goto ST
+
+
+Lbl B3
+Disp "V=πR²H
+Prompt R,H
+(π*R²*H)→Z
+Goto SU
+
+
+Lbl B4
+Disp "V=πR²H/3
+Prompt R,H
+((π*R²*H)/3)→Z
+Goto SU
+
+
+Lbl B5
+Disp "V=4/3πR
+Prompt R
+(((4/3)*π)*R²)→Z
+­1→T
+Goto SU
+
+
+Lbl B6
+Disp "V=π(r²+rR+R²)H/3
+Input "r=",Q
+Input "R=",R
+Input "H=",H
+π(Q²+QR+R²)H/3→Z:1→T
+Goto SU
+
+Lbl B7
+Disp "AREA OF BASE*H/3
+Input "AREA OF BASE:",A
+Prompt H
+(A*H)/3→Z
+Goto ST
+
+Lbl C1
+Disp "SA=6S²
+Prompt S
+6S²→Z:­1→T
+Goto ST
+
+
+Lbl C2
+Disp "SA=2(LW+WH+LH)
+Prompt L,W,H
+2(LW+WH+LH→Z:1→T
+Goto ST
+
+
+Lbl C3
+Disp "2πR(H+R)
+Prompt R,H
+2πR(H+R→Z
+Goto SU
+
+
+Lbl C4
+Disp "πR√(H²+R²)+πR²
+Prompt R,H
+πR√(H²+R²)+πR²→Z
+Goto SU
+
+
+Lbl C5
+Disp "4πR²
+Prompt R
+4πR²→Z:­1→T
+Goto SU
+
+
+Lbl C6
+Disp "3πR²
+Prompt R
+3πR²→Z:­1→T
+Goto SU
+
+
+Lbl SU
+Z/π→Z:1→U
+
+
+Lbl ST
+Z→X
+abs(Ans→Y
+Ans→V
+While Ans-round(Ans,0)
+1/fPart(Y→Y
+conj(V+imag(Vint(Ans→V
+imag(Ans
+End
+abs(round({Ans,Ans/X→⌊A
+⌊A(1→E
+⌊A(2→F
+1+int(log(E→A
+1+int(log(F→B
+Disp " "
+If U=1
+Output(4+T,26,"π
+If (E≥0 and F=1)
+Output(4+T,27-A-U,E
+If U=1
+Disp Zπ
+If E≥1 and F>1
+Then
+Output(4+T,27-A-B-U-1,E
+Output(4+T,27-B-U-1,"/
+Output(4+T,27-B-U,F
+If U=0
+Disp Z
+End
+Pause 
+
+
+Lbl ZZ
+ClrHome 

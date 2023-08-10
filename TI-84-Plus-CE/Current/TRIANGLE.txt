@@ -1,0 +1,115 @@
+CLASSIC
+ClrHome:FnOff 
+Degree:AxesOff
+0→H
+Menu("Triangle Solver","Angles",R1,"SAS",1,"SSA",2,"ASA",3,"SAA",4,"SSS",5,"Exit",6
+
+Lbl R1
+ClrHome
+Radian
+Menu("Convert","Degrees to DMS",R2,"DMS to Degrees",R3,"Radians to Degrees",R4,"Polar to Rectangular",R5,"Rectangular to Polar",R6,"Exit",6)
+Lbl R2
+Input "Degrees:",D
+Disp DDMS
+Pause 
+Goto 6
+Lbl R3
+Input "Degrees:",D
+Input "Minutes:",M
+Input "Seconds:",S
+D+1/60M+1/3600S→X
+Disp XFrac
+Pause 
+Goto 6
+Lbl R4
+Degree
+Input "Radians:",A
+A→X
+Disp XFrac
+Pause 
+Goto 6
+Lbl R5 
+Degree 
+Input "r:",A
+Input "θ°:",B
+PRx(A,B)→X
+PRy(A,B)→Y
+Disp "X:",X,"Y:",Y
+Pause 
+Goto 6
+Lbl R6 
+Degree 
+Input "X:",A
+Input "Y:",B
+RPr(A,B)→X
+RPθ(A,B)→Y
+Disp "r:",X,"θ°:",Y
+Pause 
+Goto 6
+
+
+Lbl 1
+Input "Side A:",A
+Input "Side B:",B
+Input "Angle c°:",F
+√((A²+B²-2ABcos(F)))→C
+cos((C²+B²-A²)/(2BC))→D
+180-D-F→E
+Goto B
+Lbl 2
+Input "Side A:",A
+Input "Side B:",B
+Input "Angle a°:",D
+sin(Bsin(D)/A)→E
+Lbl C
+If A<B and E≠90
+Then
+180-E→E
+H+1→H
+End
+180-D-E→F
+√(A²+B²-2ABcos(F))→C
+Goto B
+Lbl 3
+Input "Side A:",A
+Input "Angle b°:",E
+Input "Angle c°:",F
+180-E-F→D
+Goto A
+Lbl 4
+Input "Side A:",A
+Input "Angle a°:",D
+Input "Angle b°:",E
+180-D-E→F
+Lbl A
+Asin(E)/sin(D)→B
+Asin(F)/sin(D)→C
+Goto B
+Lbl 5
+Input "Side A:",A
+Input "Side B:",B
+Input "Side C:",C
+cos((B²+C²-A²)/(2BC))→D
+cos((A²+C²-B²)/(2AC))→E
+cos((A²+B²-C²)/(2AB))→F
+Lbl B
+ClrDraw
+.5ABsin(F)→G
+TextColor(BLUE)
+If H
+Text(2,70,H," of 2"
+TextColor(BLACK)
+Text(2,1,"Triangle:"
+Text(18,1,"Side A = ",A
+Text(32,1,"Side B = ",B
+Text(46,1,"Side C = ",C
+Text(60,1,"Angle a° = ",D
+Text(74,1,"Angle b° = ",E
+Text(88,1,"Angle c° = ",F
+Text(102,1,"Area = ",G
+Pause 
+If H=1
+Goto C
+Lbl 6
+AxesOn :FnOn 
+ClrHome

@@ -1,0 +1,276 @@
+Lbl A1
+ClrHome
+Menu("MathCounts","Angles",B,"Diagonals",C,"Number of Factors",D,"Divisibility Rules",E,"Combinations",F,"Triangles",G,"Distance Formula",H,"Next",A2,"Quit",ZZ)
+Lbl A2
+Menu("MathCounts","Primes < 500",I,"Perfect Squares < 1000",J,"Powers of Natural #s",K,"Fractions - Decimals",L,"Factorials",M,"Special Factorizations",N,"Units Digits Patterns",O,"Back",A1,"Quit",ZZ)
+
+
+Lbl B
+Menu("Convex Polygon","Exterior Angles",B1,"Interior Angles",B2)
+Lbl B1
+ClrHome
+Input "# of Sides:",A
+360/A→A
+Disp A
+Pause 
+Goto ZZ
+Lbl B2
+ClrHome
+Input "# of Sides:",A
+360/A→A
+180-A→A
+Disp A
+Pause 
+Goto ZZ
+
+Lbl C
+ClrHome
+Disp "Convex Polygon: n(n-3)/2"
+Input "# of Sides:",N
+((N(N-3))/2)→A
+Disp A
+Pause 
+Goto ZZ
+
+Lbl D
+ClrHome 
+Disp "Find Prime Factorization,","Increase Exponents by 1,","and Multiply Exponents"
+Pause 
+Goto ZZ
+
+Lbl E
+ClrHome 
+Disp "2: Even #","3: Sum / by 3","4: Last 2 digits / by 4","5: Last digit is 0 or 5","6: Divisible by 2 and 3","7: Remove last digit and","double it, subtract from","remaining, divide by 7"
+Pause 
+ClrHome 
+Disp "8: Last digits / by 8","9: Sum / by 9","10: Last digit is 0","11: Number all digits,","sum odd - sum even,","divide by 11","12: Divisible by 3 and 4
+Pause 
+Goto ZZ
+
+Lbl F
+Lbl 13
+Menu("Combinations","Order Matters",G6,"Order Doesn't Matter",G7)
+Lbl G6
+ClrHome
+Disp "Permutation"
+Disp "nPr=n!/((n-r)!)
+Input ":",A
+Disp "Choose"
+Input ":",B
+A nCr B→X
+ClrHome
+Disp X
+Pause 
+Goto ZZ
+Lbl G7
+ClrHome
+Disp "Combination"
+Disp "nCr=n!/(r!(n-r)!)
+Input ":",A
+Disp "Choose"
+Input ":",B
+(A!)/((B!)(A-B)!)→X
+ClrHome
+Disp X
+Pause 
+Goto ZZ
+
+
+Lbl G
+ClrHome 
+Disp "45-45-90:","1:1:√(2)","","30-60-90:","1:√(3):2"
+Pause 
+ClrHome 
+Disp "Pythagorean Triples:","3-4-5","5-12-13","7-24-25","8-15-17","9-40-41","11-60-61","12-35-37","20-21-29"
+Pause 
+Goto ZZ
+
+
+Lbl H
+ClrHome
+Disp "√(((X₂-X₁)²)+((Y₂-Y₁)²)+((Z₂-Z₁)²))
+Input "X₁:",X
+Input "Y₁:",Y
+Input "Z₁:",Z
+Input "X₂:",A
+Input "Y₂:",B
+Input "Z₂:",C
+√(((A-X)²)+((B-Y)²)+((C-Z)²))→D
+Disp "Distance:"
+Disp D
+Pause 
+Goto ZZ
+
+
+Lbl I
+ClrHome 
+ClrDraw 
+AxesOff 
+Text(0,0,"2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37"
+Text(15,0,"41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83"
+Text(30,0,"89, 97, 101, 103, 107, 109, 113, 127, 131"
+Text(45,0,"137,139,149,151,157,163,167,173,179"
+Text(60,0,"181,191,193,197,199,211,223,227,229"
+Text(75,0,"233,239,241,251,257,263,269,271,277"
+Text(90,0,"281,283,293,307,311,313,317,331,337"
+Text(105,0,"347,349,353,359,367,373,379,383,389"
+Text(120,0,"397,401,409,419,421,431,433,439,443"
+Text(135,0,"449,457,461,463,467,479,487,491,499"
+Pause 
+Goto ZZ
+
+
+Lbl J
+ClrHome 
+ClrDraw 
+AxesOff 
+Text(0,0,"1-1, 2-4, 3-9, 4-16, 5-25, 6-36"
+Text(15,0,"7-49, 8-64, 9-81, 10-100, 11-121"
+Text(30,0,"12-144, 13-169, 14-196, 15-225"
+Text(45,0,"16-256, 17-289, 18-324, 19-361"
+Text(60,0,"20-400, 21-441, 22-484, 23-529"
+Text(75,0,"24-576, 25-625, 26-676, 27-729"
+Text(90,0,"28-784, 29-841, 30-900, 31-961"
+Pause 
+Goto ZZ
+
+
+Lbl K
+ClrHome 
+ClrDraw 
+AxesOff 
+Text(0,0,"2^2=4
+Text(15,0,"2^3=8
+Text(30,0,"2^4=16
+Text(45,0,"2^5=32
+Text(60,0,"2^6=64
+Text(75,0,"2^7=128
+Text(90,0,"2^8=256
+Text(105,0,"2^9=512
+Text(120,0,"2^10=1,024
+Pause 
+ClrDraw 
+Text(0,0,"3^2=9
+Text(15,0,"3^3=27
+Text(30,0,"3^4=81
+Text(45,0,"3^5=243
+Text(60,0,"3^6=729
+Text(75,0,"
+Text(90,0,"4^2=16
+Text(105,0,"4^3=64
+Text(120,0,"4^4=256
+Text(135,0,"4^5=1,024
+Pause 
+ClrDraw 
+Text(0,0,"5^2=25
+Text(15,0,"5^3=125
+Text(30,0,"5^4=625
+Text(45,0,"
+Text(60,0,"6^2=36
+Text(75,0,"6^3=216
+Text(90,0,"6^4=1,296
+Pause 
+ClrDraw 
+Text(0,0,"7^2=49
+Text(15,0,"7^3=343
+Text(30,0,"7^4=2,401
+Text(45,0,"
+Text(60,0,"8^2=64
+Text(75,0,"8^3=512
+Text(90,0,"
+Text(105,0,"9^2=81
+Text(120,0,"9^3=729
+Pause 
+Goto ZZ
+
+
+Lbl L
+ClrHome 
+ClrDraw 
+AxesOff 
+Text(0,0,"1/2=.5
+Text(15,0,"1/3=.3 repeat
+Text(30,0,"2/3=.6 repeat
+Text(45,0,"1/4=.25
+Text(60,0,"3/4=.75
+Text(75,0,"1/5=.2
+Text(90,0,"2/5=.4
+Text(105,0,"3/5=.6
+Text(120,0,"4/5=.8
+Text(135,0,"1/6=.16  6 repeat
+Pause 
+ClrDraw 
+Text(0,0,"5/6=.83  3 repeat
+Text(15,0,"1/7=.142857 repeat
+Text(30,0,"1/8=.125
+Text(45,0,"3/8=.375
+Text(60,0,"5/8=.625
+Text(75,0,"7/8=.875
+Text(90,0,"1/9=.1 repeat
+Text(105,0,"2/9=.2 repeat
+Text(120,0,"1/11=.09 repeat
+Text(135,0,"2/11=.18 repeat
+Pause 
+Goto ZZ
+
+
+Lbl M
+ClrHome 
+ClrDraw 
+AxesOff 
+Text(0,0,"0!=1
+Text(15,0,"1!=1
+Text(30,0,"2!=2
+Text(45,0,"3!=6
+Text(60,0,"4!=24
+Text(75,0,"5!=120
+Text(90,0,"6!=720
+Text(105,0,"7!=5,040
+Text(120,0,"8!=40,320
+Text(135,0,"9!=362,880
+Text(150,0,"10!=3,628,800
+Pause 
+Goto ZZ
+
+
+Lbl N
+ClrHome 
+ClrDraw 
+AxesOff 
+Text(0,0,"(a+b)²=a²+2ab+b²
+Text(15,0,"(a-b)²=a²-2ab+b²
+Text(30,0,"(a+b)=a+3a²b+3ab²+b
+Text(45,0,"(a-b)=a-3a²b+3ab²-b
+Text(60,0,"a²-b²=(a+b)(a-b)
+Text(75,0,"a+b=(a+b)(a²-ab+b²)
+Text(90,0,"a-b=(a-b)(a²+ab+b²)
+Pause 
+Goto ZZ
+
+
+Lbl O
+ClrHome 
+ClrDraw 
+AxesOff 
+Text(0,0,"a, a², a ...
+Text(15,0,"1 - 1
+Text(30,0,"2 - 2, 4, 8, 6
+Text(45,0,"3 - 3, 9, 7, 1
+Text(60,0,"4 - 4, 6
+Text(75,0,"5 - 5
+Text(90,0,"6 - 6
+Text(105,0,"7 - 7, 9, 3, 1
+Text(120,0,"8 - 8, 4, 2, 6
+Text(135,0,"9 - 9, 1
+Pause 
+Goto ZZ
+
+
+Lbl ZZ
+ClrHome
+ClrDraw
+AxesOff
+Text(60,8,"2015  MathCounts  State  Champions"
+Text(85,25,"Special  Thanks  to  John  Grahm"
+Wait 1
+prgmRESET

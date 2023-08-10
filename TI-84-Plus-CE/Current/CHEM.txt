@@ -1,0 +1,1241 @@
+122→dim(⌊CHEM):1.01→⌊CHEM(1):4.01→⌊CHEM(2):6.94→⌊CHEM(3):9.01→⌊CHEM(4):10.81→⌊CHEM(5):12.01→⌊CHEM(6):14.01→⌊CHEM(7):16→⌊CHEM(8):19→⌊CHEM(9):20.18→⌊CHEM(10):22.99→⌊CHEM(11):24.31→⌊CHEM(12):26.98→⌊CHEM(13):28.09→⌊CHEM(14):30.97→⌊CHEM(15):32.07→⌊CHEM(16):35.45→⌊CHEM(17):39.95→⌊CHEM(18):39.10→⌊CHEM(19):40.08→⌊CHEM(20):44.96→⌊CHEM(21):47.88→⌊CHEM(22):50.94→⌊CHEM(23):52.00→⌊CHEM(24):54.94→⌊CHEM(25):55.85→⌊CHEM(26):58.47→⌊CHEM(27):58.69→⌊CHEM(28):63.55→⌊CHEM(29):65.39→⌊CHEM(30):69.72→⌊CHEM(31):72.59→⌊CHEM(32):74.92→⌊CHEM(33):78.96→⌊CHEM(34):79.90→⌊CHEM(35):83.80→⌊CHEM(36):85.47→⌊CHEM(37):87.62→⌊CHEM(38):88.91→⌊CHEM(39):91.22→⌊CHEM(40):92.91→⌊CHEM(41):95.94→⌊CHEM(42):98.91→⌊CHEM(43):101.07→⌊CHEM(44):102.91→⌊CHEM(45):106.4→⌊CHEM(46):107.87→⌊CHEM(47):112.41→⌊CHEM(48):114.82→⌊CHEM(49):118.69→⌊CHEM(50):121.75→⌊CHEM(51):127.6→⌊CHEM(52):126.9→⌊CHEM(53):131.3→⌊CHEM(54):132.91→⌊CHEM(55):137.33→⌊CHEM(56):138.91→⌊CHEM(57):178.49→⌊CHEM(72):180.95→⌊CHEM(73):183.85→⌊CHEM(74):186.21→⌊CHEM(75):190.2→⌊CHEM(76):192.22→⌊CHEM(77):195.09→⌊CHEM(78):196.97→⌊CHEM(79):200.59→⌊CHEM(80):204.37→⌊CHEM(81):207.2→⌊CHEM(82):208.98→⌊CHEM(83):(209)→⌊CHEM(84):(210)→⌊CHEM(85):(222)→⌊CHEM(86):(223)→⌊CHEM(87):226.03→⌊CHEM(88):(227)→⌊CHEM(89):(261)→⌊CHEM(104):(262)→⌊CHEM(105):(263)→⌊CHEM(106):(262)→⌊CHEM(107):(265)→⌊CHEM(108):(266)→⌊CHEM(109):(269)→⌊CHEM(110):(272)→⌊CHEM(111):(277)→⌊CHEM(112):0→⌊CHEM(113):0→⌊CHEM(114):0→⌊CHEM(115):(289)→⌊CHEM(116):0→⌊CHEM(117):(293)→⌊CHEM(118):140.12→⌊CHEM(58):140.91→⌊CHEM(59):144.24→⌊CHEM(60):(145)→⌊CHEM(61):150.4→⌊CHEM(62):151.96→⌊CHEM(63):157.25→⌊CHEM(64):158.93→⌊CHEM(65):162.5→⌊CHEM(66):164.93→⌊CHEM(67):167.26→⌊CHEM(68):168.93→⌊CHEM(69):173.04→⌊CHEM(70):174.96→⌊CHEM(71):232.04→⌊CHEM(90):231.04→⌊CHEM(91):238.03→⌊CHEM(92):237.05→⌊CHEM(93):(244)→⌊CHEM(94):(243)→⌊CHEM(95):(247)→⌊CHEM(96):(247)→⌊CHEM(97):(251)→⌊CHEM(98):(254)→⌊CHEM(99):(257)→⌊CHEM(100):(258)→⌊CHEM(101):(259)→⌊CHEM(102):(260)→⌊CHEM(103)
+
+
+Lbl K
+ClrHome
+If θ=π
+Goto A
+If θ=
+Goto SP
+0→θ
+0→A
+Lbl K2
+Menu(" Chemistry: ","Molar Mass Solver",A,"Nomenclature",NA,"Stoichiometry",SP,"% Composition",PC,"Limiting Reagent",LR,"Percent Error",PE,"Next",K1,"Exit",EX
+Lbl K1
+Menu(" Chemistry: ","Gas Laws",GS,"Diatomic Elements",DE,"Acids/Bases",AB,"Polyatomic Ions",PI,"Chemical Reactions",CR,"Back",K2,"Exit",EX
+
+Lbl AB
+ClrHome 
+Menu("Acids and Bases","Strong Acids",B1,"Strong Bases",B2,"Weak Acids",B3,"Weak Bases",B4,"Main",K)
+Lbl B1
+ClrHome 
+Disp "HCl, H(NO3), H2(SO4)","Group 7 Ions"
+Pause 
+Goto AB
+Lbl B2
+ClrHome 
+Disp "Na(OH), K(OH)","Group 1 Ions"
+Pause 
+Goto AB
+Lbl B3
+ClrHome 
+Disp "H2S, H3P, H3N"
+Pause 
+Goto AB
+Lbl B4
+ClrHome 
+Disp "Ca(OH)2, Al(OH)3, Ba(OH)2"
+Pause 
+Goto AB
+
+
+Lbl PE
+ClrHome
+Input "Actual Value:",A
+Input "Experimental Value:",E
+((abs(E-A)/A)100)→X
+Disp " "
+Disp "Percent Error:"
+Output(4,16,X)
+Pause 
+ClrHome
+Goto K
+
+
+Lbl DE
+ClrHome 
+Disp "Diatomic Elements:","Br, I, N, Cl, H, O, F"
+Pause 
+Goto K
+
+Lbl PI
+ClrHome 
+AxesOff
+ClrHome
+ClrDraw
+Text(0,0,"Ammonium"
+Text(0,100,"NH4+"
+Text(15,0,"Acetate"
+Text(15,100,"CH3COO-,  C2H3O2-"
+Text(30,0,"Nitrate"
+Text(30,100,"NO3-"
+Text(45,0,"Nitrite"
+Text(45,100,"NO2-"
+Text(60,0,"Hydroxide"
+Text(60,100,"OH-"
+Text(75,0,"Hypochlorite"
+Text(75,100,"ClO-,  OCL-"
+Text(90,0,"Chlorite"
+Text(90,100,"ClO2-"
+Text(105,0,"Cyanate"
+Text(105,100,"CN-"
+Text(120,0,"Bicarbonate"
+Text(120,100,"HCO3-"
+Text(135,0,"Chlorate"
+Text(135,100,"ClO3-"
+Pause 
+ClrDraw
+Text(0,0,"Perchlorate"
+Text(0,120,"ClO4-"
+Text(15,0,"Permanganate"
+Text(15,120,"MnO4-"
+Text(30,0,"Carbonate"
+Text(30,120,"CO3^(-2)"
+Text(45,0,"Sulfate"
+Text(45,120,"SO4^(-2)"
+Text(60,0,"Sulfite"
+Text(60,120,"SO3^(-2)"
+Text(75,0,"Thiosulfate"
+Text(75,120,"S2O3^(-2)"
+Text(90,0,"Thiocyanate"
+Text(90,120,"SCN-,  NCS-"
+Text(105,0,"Bisulfate"
+Text(105,120,"HSO4-"
+Text(120,0,"Peroxide"
+Text(120,120,"O2^(-2)"
+Text(135,0,"Chromate"
+Text(135,120,"CrO4^(-2)
+Pause 
+ClrDraw
+Text(0,0,"Dichromate"
+Text(0,100,"Cr2O7^(-2)"
+Text(15,0,"Silicate"
+Text(15,100,"SiO3^(-2)"
+Text(30,0,"Phosphate"
+Text(30,100,"PO4^(-3)"
+Text(45,0,"Borate"
+Text(45,100,"BO3^(-3)
+Text(60,0,"Bisulfite"
+Text(60,100,"HSO3-"
+Text(75,0,"Hydrogen"
+Text(75,100,"H+"
+Text(90,0,"Mercury"
+Text(90,100,"Hg2^(+2)"
+Text(105,0,"Oxalate"
+Text(105,100,"C2O4^(-2)"
+Text(120,0,"Hydrogen  Phosphate"
+Text(120,170,"HPO4^(-2)"
+Text(135,0,"Dihydrogen  Phosphate"
+Text(135,170,"H2PO4-"
+Pause 
+ClrDraw
+ClrHome
+AxesOn 
+Goto K
+
+Lbl CR
+Menu("Reaction Classifications","Combination",C1,"Decomposition",C2,"Single Replacement",C3,"Double Replacement",C4,"Combustion",C5,"Symbols",C6,"Main",K)
+Lbl C1
+ClrHome 
+Disp "Two reactants combine to","form a single product"," ","AKA Synthesis Reaction"
+Pause 
+Goto CR
+Lbl C2
+ClrHome 
+Disp "A compound breaks down","to give two or","more products"
+Pause 
+Goto CR
+Lbl C3
+ClrHome 
+Disp "An element reacts with","a compound and replaces","one of it's elements"," ","Metals replace Hydrogen","or other Metals"," ","Nonmetals replace","other Nonmetals"
+Pause 
+Goto CR
+Lbl C4
+ClrHome 
+Disp "Two ionic compounds","exchange ions to","form new compounds"," ","Ex. precipitaion,","acid/base, gas forming"
+Pause 
+Goto CR
+Lbl C5
+ClrHome 
+Disp "A compound burns","in the presence","of oxygen producing","heat and light"," ","Organic combustion","forms CO2 and H2O"
+Pause 
+Goto CR
+Lbl C6
+ClrHome 
+Disp "Arrow = Yields or Produces","+ = Reacts or Forms With","Triangle = Heated","NR = No Reaction","S = Pure Solid","L = Pure Liquid","G = Pure Gas","AQ = Aqueous Solution","Cat = Catalyst"
+Pause 
+Goto CR
+
+
+Lbl A
+ClrHome 
+Input "Input Symbol: ",Str1
+0→X
+If Str1="H
+1→X
+If Str1="HE
+2→X
+If Str1="LI
+3→X
+If Str1="BE
+4→X
+If Str1="B
+5→X
+If Str1="C
+6→X
+If Str1="N
+7→X
+If Str1="O
+8→X
+If Str1="F
+9→X
+If Str1="NE
+10→X
+If Str1="NA
+11→X
+If Str1="MG
+12→X
+If Str1="AL
+13→X
+If Str1="SI
+14→X
+If Str1="P
+15→X
+If Str1="S
+16→X
+If Str1="CL
+17→X
+If Str1="AR
+18→X
+If Str1="K
+19→X
+If Str1="CA
+20→X
+If Str1="SC
+21→X
+If Str1="TI
+22→X
+If Str1="V
+23→X
+If Str1="CR
+24→X:
+If Str1="MN
+25→X
+If Str1="FE
+26→X
+If Str1="CO
+27→X
+If Str1="NI
+28→X
+If Str1="CU
+29→X
+If Str1="ZN
+30→X
+If Str1="GA
+31→X
+If Str1="GE
+32→X
+If Str1="AS
+33→X
+If Str1="SE
+34→X
+If Str1="BR
+35→X
+If Str1="KR
+36→X
+If Str1="RB
+37→X
+If Str1="SR
+38→X
+If Str1="Y
+39→X
+If Str1="ZR
+40→X
+If Str1="NB
+41→X
+If Str1="MO
+42→X
+If Str1="TC
+43→X
+If Str1="RU
+44→X
+If Str1="RH
+45→X
+If Str1="PD
+46→X
+If Str1="AG
+47→X
+If Str1="CD
+48→X
+If Str1="IN
+49→X
+If Str1="SN
+50→X
+If Str1="SB
+51→X
+If Str1="TE
+52→X
+If Str1="I
+53→X
+If Str1="XE
+54→X
+If Str1="CS
+55→X
+If Str1="BA
+56→X
+If Str1="LA
+57→X
+If Str1="CE
+58→X
+If Str1="PR
+59→X
+If Str1="ND
+60→X
+If Str1="PM
+61→X
+If Str1="SM
+62→X
+If Str1="EU
+63→X
+If Str1="GD
+64→X
+If Str1="TB
+65→X:
+If Str1="DY
+66→X
+If Str1="HO
+67→X:
+If Str1="ER
+68→X
+If Str1="TM
+69→X
+If Str1="YB
+70→X
+If Str1="LU
+71→X
+If Str1="HF
+72→X
+If Str1="TA
+73→X
+If Str1="W
+74→X
+If Str1="RE
+75→X
+If Str1="OS
+76→X
+If Str1="IR
+77→X
+If Str1="PT
+78→X
+If Str1="AU
+79→X
+If Str1="HG
+80→X
+If Str1="TL
+81→X
+If Str1="PB
+82→X
+If Str1="BI
+83→X
+If Str1="PO
+84→X
+If Str1="AT
+85→X
+If Str1="RN
+86→X
+If Str1="FR
+87→X
+If Str1="RA
+88→X
+If Str1="AC
+89→X
+If Str1="TH
+90→X
+If Str1="PA
+91→X
+If Str1="U
+92→X
+If Str1="NP
+93→X
+If Str1="PU
+94→X
+If Str1="AM
+95→X
+If Str1="CM
+96→X
+If Str1="BK
+97→X
+If Str1="CF
+98→X
+If Str1="ES
+99→X
+If Str1="FM
+100→X
+If Str1="MD
+101→X
+If Str1="NO
+102→X
+If Str1="LR
+103→X
+If Str1="RH
+104→X
+If Str1="DB
+105→X
+If Str1="SG
+106→X
+If Str1="BH
+107→X
+If Str1="HS
+108→X
+If Str1="MT
+109→X
+If Str1="UUN
+110→X
+If Str1="UUU
+111→X
+If Str1="UUB
+112→X
+If Str1="UUT
+113→X
+If Str1="UUQ
+114→X
+If Str1="UUP
+115→X
+If Str1="UUH
+116→X
+If Str1="UUS
+117→X
+If Str1="UUO
+118→X
+If θ=π
+Goto EC
+If X=0
+Then
+Disp "Not a symbol"
+Pause 
+Goto K
+End
+Lbl D
+ClrHome
+Input "Number of Atoms: ",B
+((B*(⌊CHEM(X)))+A)→A
+ClrHome
+Menu("More Atoms?","Yes",A,"No",MK)
+Lbl MK
+Disp "Molar Mass:",A
+Pause 
+ClrHome
+Goto K
+End
+
+
+Lbl NA
+Menu("Contains Metal or NH4+?","Yes = Ionic",1,"No = Covalent",2)
+Lbl 1
+Disp "Positive Ion First"
+Pause 
+Menu("What is Positive Ion?","Type 1",3,"Type 2",4,"NH4+",5)
+Lbl 3
+ClrHome 
+Disp "Use Name of Atom"
+Pause 
+Goto 5
+Lbl 4
+ClrHome 
+Disp "Use Roman Numeral","= Ion Charge"," ","Use Name of Atom"
+Pause 
+Lbl 5
+Menu("What is Negative Ion","Monatomic",6,"Polytomic",7)
+Lbl 6
+ClrHome 
+Disp "Add -ide to stem","of atom name"
+Pause 
+Goto K
+Lbl 7
+ClrHome 
+Disp "Use Ion Name:","_ate","_ite, 1 less O than -ate"," ","per_ate","1 more O than -ate"," ","hypo_ite","1 less O than -ite"
+Pause 
+Goto K
+Lbl 2
+Menu("Starts with H?","Yes = Acid",8,"No = Not Acid",9)
+Lbl 8
+Menu("H + [What?]","Halogen",10,"Polyatomic Ion",11)
+Lbl 10
+ClrHome 
+Disp "Hydro_ic Acid"," ","Fill blank with","stem of atom name"
+Pause 
+Goto K
+Lbl 11 
+ClrHome
+Disp "ate = _ic acid","ite = _ous acid"," ","Keep per and hypo","from ion name"
+Pause 
+Goto K
+Lbl 9
+ClrHome 
+Disp "Use prefixes for #","of each type of atom"," ","Add - ide to end"
+Pause 
+ClrHome 
+Disp "1-mono   6-hexa","2-di     7-hepta","3-tri    8-octa","4-tetra  9-nona","5-penta  10-deca"
+Pause 
+Goto K
+
+
+Lbl EX
+ClrHome
+Goto ZZ
+
+
+Lbl GS
+Menu("Gas Laws","Laws",G1,"Units",G2,"Conversions",G3,"Main",K)
+Lbl G1
+ClrHome 
+Disp "Boyle's Law","P1V1=P2V2"," ","Charle's Law","(V1/T1)=(V2/T2)"," ","Gay-Lussac's Law","(P1/T1)=(P2/T2)"
+Pause 
+ClrHome 
+Disp "Dalton's Law","Ptotal=P1+P2"," ","Avagadro's Law","(V1/n1)=(V2/n2)"," ","D=M/V"
+Pause 
+ClrHome 
+Disp "Combined Gas Law","(P1V1)/T1 = (P2V2)/T2"," ","Ideal Gas Law","PV=nRT"," ","Ideal Gas Constant",".08206 atm*liters/mol*k"
+Pause 
+Goto GS
+Lbl G2
+ClrHome 
+Disp "STP:","1 atm at 0°","22.4 Liters/Mole"," ","Volume = Liters","Pressure = Atmospheres","Temperature = Kelvin"
+Pause 
+Goto GS
+Lbl G3
+ClrHome 
+Disp "1 atm = 101.325 kpa","1 atm = 101325 pa","1 atm = 14.6959 psi","1 atm = 760 torr"," ","1 kpa = 7.5 torr","1 kpa = 1000 pa"
+Pause 
+Goto GS
+
+
+Lbl SP
+0→A
+0→B
+0→C
+0→D
+0→E
+0→F
+0→U
+ClrHome
+Menu("Given Units","Moles",HM,"Grams",HG,"Molecules",HC,"Atoms",HA)
+Lbl HA
+ClrHome
+Input "Atoms/Molecule:",B
+ClrHome
+Input "# of Atoms:",A
+(B*A)/(6.02*10^23)→C
+ClrHome
+Goto MO
+Lbl HC
+Input "# of Molecules:",D
+D/(6.02*10^23)→C
+ClrHome
+Goto MO
+Lbl HG
+Input "Molar Mass:",E
+Lbl RG
+ClrHome
+Menu("Units","Kilograms",L1,"Grams",L2,"Milligrams",L3)
+Lbl L2
+1→U
+Goto DU
+Lbl L1
+1000→U
+Goto DU
+Lbl L3
+1/1000→U
+Goto DU
+Lbl DU
+ClrHome
+Input "Amount:",F
+ClrHome
+(F*U)/E→C
+Goto MO
+Lbl HM
+Input "# of Moles:",C
+Lbl MO
+ClrHome
+If θ=
+Then
+1→R
+Goto DF
+End
+Input "Mole Ratio:",R
+ClrHome
+Lbl DF
+Menu("Final Units","Moles",GM,"Grams",GG,"Molecules",GC,"Atoms",GA)
+Lbl GM
+C*R→C
+Disp C,"Moles"
+Pause 
+Goto K
+Lbl GG
+If E≠0
+Then
+F*R→F
+Disp F,"Grams"
+Pause 
+Goto K
+End
+Input "Molar Mass:",E
+ClrHome
+E*C*R→E
+Disp E,"Grams"
+Pause 
+Goto K
+Lbl GC
+ClrHome
+If D≠0
+Then
+D*R→D
+Disp D,"Molecules"
+Pause 
+Goto K
+End
+C/(6.02*10^23)*R→D
+Disp D,"Molecules"
+Pause 
+Goto K
+Lbl GA
+If A≠0
+Then
+A*R→A
+Disp A,"Atoms"
+Pause 
+Goto K
+End
+Input "Atoms/Molecule:",B
+C/(6.02*10^23)*B*R→A
+ClrHome
+Disp A,"Atoms"
+Pause 
+Goto K
+
+
+Lbl PC
+Menu(" Given: ","Percent",P1,"Amount",P2)
+Lbl P1
+ClrHome
+Input "# of Elements:",A
+If A<2
+Then
+Disp "Too little"
+Goto K
+End
+If A>6
+Then
+Disp "Too many"
+Goto K
+End
+ClrHome
+Disp "Enter the name of","the 1st element"
+Input ":",Str1
+ClrHome
+Disp "Enter the name of","the 2nd element"
+Input ":",Str2
+ClrHome
+If A≥3
+Then
+Disp "Enter the name of","the 3rd element"
+Input ":",Str3
+ClrHome
+If A≥4
+Then
+Disp "Enter the name of","the 4th element"
+Input ":",Str4
+ClrHome
+If A≥5
+Then
+Disp "Enter the name of","the 5th element"
+Input ":",Str5
+ClrHome
+If A=6
+Then
+Disp "Enter the name of","the 6th element"
+Input ":",Str6
+ClrHome
+End
+End
+End
+End
+Disp "What is the","percent of","in the compond?","(Decimal)"
+Output(2,12,Str1)
+Input ":",B
+ClrHome
+Disp "What is the","percent of","in the compond?","(Decimal)"
+Output(2,12,Str2)
+Input ":",C
+If A≥3
+Then
+ClrHome
+Disp "What is the","percent of","in the compond?","(Decimal)"
+Output(2,12,Str3)
+Input ":",D
+If A≥4
+Then
+ClrHome
+Disp "What is the","percent of","in the compond?","(Decimal)"
+Output(2,12,Str4)
+Input ":",E
+If A≥5
+Then
+ClrHome
+Disp "What is the","percent of","in the compond?","(Decimal)"
+Output(2,12,Str5)
+Input ":",F
+If A≥6
+Then
+ClrHome
+Disp "What is the","percent of","in the compond?","(Decimal)"
+Output(2,12,Str6)
+Input ":",G
+End
+End
+End
+End
+ClrHome
+Disp "What is the","atomic mass of","    ?"
+Output(3,1,Str1)
+Input ":",H
+ClrHome
+Disp "What is the","atomic mass of","    ?"
+Output(3,1,Str2)
+Input ":",I
+If A≥3
+Then
+ClrHome
+Disp "What is the","atomic mass of","    ?"
+Output(3,1,Str3)
+Input ":",J
+If A≥4
+Then
+ClrHome
+Disp "What is the","atomic mass of","    ?"
+Output(3,1,Str4)
+Input ":",K
+If A≥5
+Then
+ClrHome
+Disp "What is the","atomic mass of","    ?"
+Output(3,1,Str5)
+Input ":",L
+If A≥6
+Then
+ClrHome
+Disp "What is the","atomic mass of","    ?"
+Output(3,1,Str6)
+Input ":",M
+End
+End
+End
+End
+ClrHome
+B/H→B
+C/I→C
+If A≥3
+D/J→D
+If A≥4
+E/K→E
+If A≥5
+F/L→F
+If A=6
+G/M→G
+B→N
+If C<N
+C→N
+If A≥3
+Then
+If D<N
+D→N
+If A≥4
+Then
+If E<N
+E→N
+If A≥5
+Then
+If F<N
+F→N
+If A=6
+Then
+If G<N
+G→N
+End
+End
+End
+End
+B/N→B
+C/N→C
+If A≥3
+D/N→D
+If A≥4
+E/N→E
+If A≥5
+F/N→F
+If A=6
+G/N→G
+ClrHome
+Disp Str1
+Output(1,5,B)
+Disp Str2
+Output(2,5,C)
+If A≥3
+Then
+Disp Str3
+Output(3,5,D)
+If A≥4
+Then
+Disp Str4
+Output(4,5,E)
+If A≥5
+Then
+Disp Str5
+Output(5,5,F)
+If A=6
+Then
+Disp Str6
+Output(6,5,G)
+End
+End
+End
+End
+Pause 
+ClrHome
+Goto K
+End
+Lbl P2
+ClrHome
+Input "# of Elements:",A
+If A<2
+Then
+Disp "Too little"
+Goto K
+End
+If A>6
+Then
+Disp "Too many"
+Goto K
+End
+ClrHome
+Disp "Enter the name of","the 1st element"
+Input ":",Str1
+ClrHome
+Disp "Enter the name of","the 2nd element"
+Input ":",Str2
+ClrHome
+If A≥3
+Then
+Disp "Enter the name of","the 3rd element"
+Input ":",Str3
+ClrHome
+If A≥4
+Then
+Disp "Enter the name of","the 4th element"
+Input ":",Str4
+ClrHome
+If A≥5
+Then
+Disp "Enter the name of","the 5th element"
+Input ":",Str5
+ClrHome
+If A=6
+Then
+Disp "Enter the name of","the 6th element"
+Input ":",Str6
+ClrHome
+End
+End
+End
+End
+Disp "What is the","amount of","in the compond?","(Grams)"
+Output(2,12,Str1)
+Input ":",B
+ClrHome
+Disp "What is the","amount of","in the compond?","(Grams)"
+Output(2,12,Str2)
+Input ":",C
+If A≥3
+Then
+ClrHome
+Disp "What is the","amount of","in the compond?","(Grams)"
+Output(2,12,Str3)
+Input ":",D
+If A≥4
+Then
+ClrHome
+Disp "What is the","amount of","in the compond?","(Grams)"
+Output(2,12,Str4)
+Input ":",E
+If A≥5
+Then
+ClrHome
+Disp "What is the","amount of","in the compond?","(Grams)"
+Output(2,12,Str5)
+Input ":",F
+If A≥6
+Then
+ClrHome
+Disp "What is the","amount of","in the compond?","(Grams)"
+Output(2,12,Str6)
+Input ":",G
+End
+End
+End
+End
+ClrHome
+B+C→N
+If A≥3
+D+N→N
+If A≥4
+E+N→N
+If A≥5
+F+N→N
+If A=6
+G+N→N
+B/N*100→B
+C/N*100→C
+If A≥3
+D/N*100→D
+If A≥4
+E/N*100→E
+If A≥5
+F/N*100→F
+If A=6
+G/N*100→G
+ClrHome
+Disp Str1
+Output(1,5,B)
+Disp Str2
+Output(2,5,C)
+If A≥3
+Then
+Disp Str3
+Output(3,5,D)
+If A≥4
+Then
+Disp Str4
+Output(4,5,E)
+If A≥5
+Then
+Disp Str5
+Output(5,5,F)
+If A=6
+Then
+Disp Str6
+Output(6,5,G)
+End
+End
+End
+End
+Pause 
+ClrHome
+Goto K
+End
+ClrHome
+Disp "Invalid"
+Pause 
+ClrHome
+Goto K
+
+
+Lbl LR
+Input "Substance One:",Str1
+Input "Substance Two:",Str2
+ClrHome 
+Disp "Grams of",Str1
+Input ":",D
+Disp "Grams of",Str2
+Input ":",E
+ClrHome 
+Disp "Atomic Mass of",Str1
+Input ":",A
+Disp "Atomic Mass of",Str2
+Input ":",B
+ClrHome 
+Disp "Mole Ratio of"
+Disp Str1,"to",Str2
+Input ":",C
+(D/A)/C→F
+(E/B)→G
+If F>G
+Then
+ClrHome 
+Disp Str2,"Is the limiting","reactant."
+Pause 
+Goto K
+End
+If F<G
+Then
+ClrHome 
+Disp Str1,"Is the limiting","reactant."
+Pause 
+Goto K
+End
+If F=G
+Then
+ClrHome 
+Disp Str1,"and",Str2,"will run out","at the same","time."
+Pause 
+Goto K
+End
+
+
+Lbl EC
+ClrHome
+If X=1
+Disp "1S1
+If X≥2
+Disp "1S2
+If X=3
+Disp "2S1
+If X≥4
+Disp "2S2
+If X=5
+Disp "2P1
+If X=6
+Disp "2P2
+If X=7
+Disp "2P3
+If X=8
+Disp "2P4
+If X=9
+Disp "2P5
+If X≥10
+Disp "2P6
+If X=11
+Disp "3S1
+If X≥12
+Disp "3S2
+If X=13
+Disp "3P1
+If X=14
+Disp "3P2
+If X=15
+Disp "3P3
+If X=16
+Disp "3P4
+If X=17
+Disp "3P5
+If X≥18
+Disp "3P6
+If X=19
+Disp "4S1
+If X≥20
+Disp "4S2
+If X=21
+Disp "3D1
+If X=22
+Disp "3D2
+If X=23
+Disp "3D3
+If X=24
+Disp "3D4
+If X=25
+Disp "3D5
+If X=26
+Disp "3D6
+If X=27
+Disp "3D7
+If X=28
+Disp "3D8
+If X=29
+Disp "3D9
+If X≥30
+Disp "3D10
+If X≤30
+Then
+Pause 
+ClrHome
+Goto ZZ
+End
+Pause 
+ClrHome
+If X=31
+Disp "4P1
+If X=32
+Disp "4P2
+If X=33
+Disp "4P3
+If X=34
+Disp "4P4
+If X=35
+Disp "4P5
+If X≥36
+Disp "4P6
+If X=37
+Disp "5S1
+If X≥38
+Disp "5S2
+If X=39
+Disp "4D1
+If X=40
+Disp "4D2
+If X=41
+Disp "4D3
+If X=42
+Disp "4D4
+If X=43
+Disp "4D5
+If X=44
+Disp "4D6
+If X=45
+Disp "4D7
+If X=46
+Disp "4D8
+If X=47
+Disp "4D9
+If X≥48
+Disp "4D10
+If X=49
+Disp "5P1
+If X=50
+Disp "5P2
+If X=51
+Disp "5P3
+If X=52
+Disp "5P4
+If X=53
+Disp "5P5
+If X≥54
+Disp "5P6
+If X=55
+Disp "6S1
+If X≥56
+Disp "6S2
+If X=57
+Disp "4F1
+If X=58
+Disp "4F2
+If X=59
+Disp "4F3
+If X=60
+Disp "4F4
+If X=61
+Disp "4F5
+If X=62
+Disp "4F6
+If X=63
+Disp "4F7
+If X=64
+Disp "4F8
+If X=65
+Disp "4F9
+If X=66
+Disp "4F10
+If X=67
+Disp "4F11
+If X=68
+Disp "4F12
+If X=69
+Disp "4F13
+If X≥70
+Disp "4F14
+If X=71
+Disp "5D1
+If X=72
+Disp "5D2
+If X=73
+Disp "5D3
+If X=74
+Disp "5D4
+If X=75
+Disp "5D5
+If X=76
+Disp "5D6
+If X=77
+Disp "5D7
+If X=78
+Disp "5D8
+If X=79
+Disp "5D9
+If X≥80
+Disp "5D10
+If X≤80
+Then
+Pause 
+ClrHome
+Goto ZZ
+End
+Pause 
+ClrHome
+If X=81
+Disp "6P1
+If X=82
+Disp "6P2
+If X=83
+Disp "6P3
+If X=84
+Disp "6P4
+If X=85
+Disp "6P5
+If X≥86
+Disp "6P6
+If X=87
+Disp "7S1
+If X≥88
+Disp "7S2
+If X=89
+Disp "5F1
+If X=90
+Disp "5F2
+If X=91
+Disp "5F3
+If X=92
+Disp "5F4
+If X=93
+Disp "5F5
+If X=94
+Disp "5F6
+If X=95
+Disp "5F7
+If X=96
+Disp "5F8
+If X=97
+Disp "5F9
+If X=98
+Disp "5F10
+If X=99
+Disp "5F11
+If X=100
+Disp "5F12
+If X=101
+Disp "5F13
+If X≥102
+Disp "5F14
+If X=103
+Disp "6D1
+If X=104
+Disp "6D2
+If X=105
+Disp "6D3
+If X=106
+Disp "6D4
+If X=107
+Disp "6D5
+If X=108
+Disp "6D6
+If X=109
+Disp "6D7
+If X=110
+Disp "6D8
+If X=111
+Disp "6D9
+If X≥112
+Disp "6D10
+If X=113
+Disp "7P1
+If X=114
+Disp "7P2
+If X=115
+Disp "7P3
+If X=116
+Disp "7P4
+If X=117
+Disp "7P5
+If X=118
+Disp "7P6
+Pause 
+ClrHome
+
+Lbl ZZ

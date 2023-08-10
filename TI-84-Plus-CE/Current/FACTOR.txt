@@ -1,0 +1,271 @@
+CLASSIC
+a+b
+DelVar L₁DelVar L₂DelVar L₃DelVar L₄DelVar L₅ClrHome
+ClrDraw:AxesOff
+FnOff :PlotsOff 
+Input "Degree of Polynomial:",D
+0→dim(L₁
+For(I,D,0,­1
+2(D-I+1
+If Ans>10
+10
+Output(Ans,1,"Coefficient of X^
+Output(Ans,18,I
+Disp "
+Input ":",C
+C→L₁(D-I+1
+End
+D+1→D
+0→C
+0→R
+0→Z
+0→θ
+While not(abs(L₁(D
+D-1→D
+Z+1→Z
+End
+If real(L₁(1))<0 or 0>imag(L₁(1
+Then
+Text(R,C,"­
+C+6→C
+­L₁→L₁
+End
+real(L₁)+imag(L₁→L₂
+L₂(1→A
+For(I,2,dim(L₂
+gcd(A,abs(L₂(I→A
+End
+If A
+L₁/A→L₁
+If A>1
+Then
+Text(R,C,A
+C+8+8int(log(A→C
+End
+If Z
+Then
+Text(R,C,"X
+C+8→C
+If Z=2
+Then
+Text(R,C,"²
+C+8→C
+End
+If Z>2
+Then
+Text(R,C,"^
+Text(R,C+8,Z
+C+16+8int(log(Z→C
+End
+End
+If D=1
+Goto 3
+Lbl 0
+1→I
+For(J,1,2
+abs(L₁(I→A
+{1→L₂
+2→B
+While 2<Anot(fPart(A/2
+Lbl 1
+A/B→A
+If fPart(max(L₂)/B
+L₂→L₄
+augment(L₄,BL₂→L₂
+End
+For(G,B+(B=2),√(A),2)
+If fPart(A/G
+End
+G→B
+A→G
+If B²≤A
+Goto 1
+augment(L₂,AL₂→L₂
+If I=1
+L₂→L₃
+D→I
+End
+0→dim(L₄
+For(I,1,dim(L₂
+For(J,1,dim(L₃
+L₂(I)/L₃(J→L₄(1+dim(L₄
+End
+End
+SortA(L₄
+0→dim(L₅
+L₄(1→L₅(1
+For(I,2,dim(L₄
+If L₄(I-1)≠L₄(I
+L₄(I→L₅(1+dim(L₅
+End
+0→dim(L₄
+dim(L₅→B
+For(I,max(1,int(B/2)),B
+L₅(I→L₄(1+dim(L₄
+B-I-1→J
+If J>0 and J≠I
+L₅(J→L₄(1+dim(L₄
+End
+0→dim(L₅
+1→A
+Lbl 2
+1→B
+Repeat B=2
+D→E
+L₁(1→L₂(1
+For(I,2,D
+L₁(I)+L₂(I-1)L₄(A→L₂(I
+End
+If not(abs(L₂(D
+Then
+abs(L₄(A→Y
+1→N
+While Y>­7N
+N/Y→N
+fPart(Y→Y
+End
+If 1>fPart(N
+iPart(N→N
+round(N,0→N
+round(NL₄(A),0→F
+Text(R,C,"(
+C+6→C
+If N>1
+Then
+Text(R,C,N
+C+8+8int(log(N→C
+End
+Text(R,C,"X
+If θ
+Text(R,C,"X²
+If θ
+C+8→C
+C+8→C
+Text(R,C,"-
+If 0>real(F) or 0>imag(F
+Text(R,C,"+
+C+8→C
+If C≥220
+DelVar CR+14→R
+If real(F) or 1<abs(F
+Then
+Text(R,C,abs(F
+C+8+8int(log(abs(F→C
+End
+If imag(F
+Then
+Text(R,C,"
+C+8→C
+End
+Text(R,C,")
+C+6→C
+D-1→D
+D→dim(L₂
+L₂/N→L₁
+End
+If D=E or D=1
+2→B
+End
+If A≤dim(L₄
+Then
+If 0>imag(L₄(A
+Then
+A+1→A
+Else
+L₄(A→L₄(A
+End
+End
+If D>1 and A≤dim(L₄
+Goto 2
+θ+1→θ
+If D>1 and θ=1
+Then
+real(L₁)+imag(L₁→L₂
+For(I,D,2,­1
+If L₂(I) and fPart((I-1)/2
+3→θ
+End
+If θ=1
+Then
+{L₁(1→L₂
+For(I,3,D,2
+L₁(I→L₂(1+dim(L₂
+End
+L₂→L₁
+0→dim(L₂
+dim(L₁→D
+End
+End
+If D>1 and θ=1
+Goto 0
+If D>1 and θ=2
+Then
+{L₁(1),0→L₂
+For(I,2,D
+augment(L₂,augment({L₁(I)},{0→L₂
+End
+dim(L₂)-1→dim(L₂
+L₂→L₁
+0→dim(L₂
+dim(L₁→D
+End
+If D=1 and 1=imag(L₁(1
+Text(R,C,"
+If D>1
+Then
+Text(R,C,"(
+C+6→C
+For(I,1,dim(L₁
+D-I→J
+L₁(I→A
+If abs(A
+Then
+If real(A)<0 and I=1 or (I=1 and 0>imag(A
+Then
+Text(R,C,"­
+C+8→C
+End
+If I>1
+Then
+Text(R,C,"-
+If 0<real(A) or 0<imag(A
+Text(R,C,"+
+C+8→C
+End
+If C≥200
+DelVar CR+14→R
+If 1<abs(A) or not(J
+Then
+Text(R,C,abs(A
+C+8+8int(log(abs(A→C
+End
+If imag(A
+Then
+Text(R,C,"
+C+8→C
+End
+If J
+Then
+Text(R,C,"X
+C+8→C
+End
+If J=2
+Then
+Text(R,C,"²
+C+8→C
+End
+If J>2
+Then
+Text(R,C,"^
+Text(R,C+8,J
+C+16+8int(log(J→C
+End
+End
+End
+Text(R,C,")
+End
+Lbl 3
+Pause 
+AxesOn :FnOn 
+SetUpEditor 
+Output(1,1,"

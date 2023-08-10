@@ -1,0 +1,169 @@
+:
+GridOff
+PlotsOff 
+FnOff 
+AxesOff
+ClrDraw
+ClrHome
+0→Xmin:94→Xmax:0→Ymax:­62→Ymin
+Lbl 1
+Menu("IDENTITIES","RECIPROCAL",2,"QUOTIENT",3,"PYTHAGOREAN",4,"COFUNCTION",5,"EVEN/ODD",6,"SUM/DIFFERENCE",7,"DOUBLE ANGLE",DA,"EXIT",9
+Lbl 2
+ClrDraw
+TextColor(BLACK)
+Text(0,50,"RECIPROCAL IDENTITIES
+TextColor(BLUE)
+Line(5,­7,88,­7
+Text(35,10,"sin(X)
+Text(35,60,"=
+Text(28,94,"1
+Text(42,78,"csc(X)
+Line(27,­16,43,­16
+Text(35,146,"csc(X)
+Text(35,196,"=
+Text(28,232,"1
+Text(42,217,"sin(X)
+Line(76,­16,92,­16
+Text(70,10,"cos(X)
+Text(70,60,"=
+Text(63,94,"1
+Text(77,78,"sec(X)
+Line(27,­29,43,­29
+Text(70,146,"sec(X)
+Text(70,196,"=
+Text(63,232,"1
+Text(77,215,"cos(X)
+Line(76,­29,92,­29
+Text(105,10,"tan(X)
+Text(105,60,"=
+Text(98,94,"1
+Text(112,78,"cot(X)
+Line(27,­42.5,43,­42.5
+Text(105,146,"cot(X)
+Text(105,196,"=
+Text(98,232,"1
+Text(112,214,"tan(X)
+Line(76,­42.5,92,­42.5
+Pause 
+Goto 1
+Lbl DA
+ClrDraw
+TextColor(BLACK
+Text(0,45,"DOUBLE ANGLE IDENTITIES
+Line(5,­7,88,­7
+TextColor(BLUE
+Text(30,0,"sin(2X)=2sin(x)cos(x)
+Text(55,0,"cos(2X)=cos(X)²-sin(X)²
+Text(80,53,"=1-2sin(X)²
+Text(105,53,"=2cos(X)²-1
+Text(135,0,"tan(2X)=
+Text(125,70,"2tan(X)
+Text(145,70,"1-tan(X)²
+Line(25,­54,50,­54)
+Pause 
+Goto 1
+Lbl 3
+ClrDraw
+TextColor(BLACK
+Text(0,55,"QUOTIENT IDENTITIES
+Line(5,­7,88,­7
+TextColor(BLUE
+Text(55,80,"tan(X) =
+Text(45,142,"sin(X)
+Text(65,140,"cos(X)
+Line(49,­23,65,­23
+Text(120,80,"cot(X) =
+Text(110,140,"cos(X)
+Text(130,142,"sin(X)
+Line(49,­48,65,­48
+Pause 
+Goto 1
+Lbl 4
+ClrDraw
+TextColor(BLACK
+Text(0,45,"PYTHAGOREAN IDENTITIES
+Line(5,­7,88,­7
+TextColor(BLUE
+Text(40,63,"sin²(X) + cos²(X) = 1
+Text(70,63,"1 + tan²(X) = sec²(X)
+Text(100,63,"1 + cot²(X) = csc²(X)
+Pause 
+Goto 1
+Lbl 5
+ClrDraw
+TextColor(BLACK
+Text(0,47,"COFUNCTION IDENTITIES
+Line(5,­7,88,­7
+TextColor(BLUE
+Text(25,63,"sin(.5π-X) = cos(X)
+Text(50,63,"cos(.5π-X) = sin(X)
+Text(75,63,"tan(.5π-X) = cot(X)
+Text(100,63,"cot(.5π-X) = tan(X)
+Text(125,63,"sec(.5π-X) = csc(X)
+Text(150,63,"csc(.5π-X) = sec(X)
+Pause 
+Goto 1
+Lbl 6
+ClrDraw
+TextColor(BLACK
+Text(0,63,"EVEN/ODD IDENTIES
+Line(5,­7,88,­7
+TextColor(BLUE
+Text(25,75,"sin(­X) = ­sin(X)  ODD
+Text(50,75,"csc(­X) = ­csc(X)  ODD
+Text(75,75,"cos(­X) = cos(X)  EVEN
+Text(100,75,"sec(­X) = sec(X) EVEN
+Text(125,75,"tan(­X) = ­tan(X) ODD
+Text(150,75,"cot(­X) = ­cot(X) ODD
+Pause 
+Goto 1
+Lbl 7
+ClrDraw
+TextColor(BLACK
+Text(5,21,"SUM/DIFFERENCE IDENTITIES
+Line(5,­7,88,­7
+TextColor(DARKGRAY
+Text(25,45,"Switch signs when (-) is in
+Text(40,18,"between
+TextColor(RED)
+Text(40,78," a
+TextColor(DARKGRAY
+Text(40,88," and 
+TextColor(RED
+Text(40,118,"b 
+TextColor(DARKGRAY
+Text(40,128,"in left equation.
+TextColor(BLUE
+Text(75,5,"sin(a+b) = sin(a)cos(b)+cos(a)sin(b)
+Text(105,5,"cos(a+b) = cos(a)cos(b)-sin(a)sin(b)
+Text(140,5,"tan(a+b) =
+Text(130,88,"tan(a)+tan(b)
+Line(30,­55.5,69,­55.5
+Text(150,87,"1-tan(a)tan(b)
+Pause 
+Goto 1
+Lbl 9
+ClrHome
+ClrDraw
+BackgroundOff
+MATHPRINT
+Normal
+Float
+Radian
+Func
+Thick
+Sequential
+Real
+Full
+nd
+AUTO
+DiagnosticOff
+STATWIZARD ON
+RectGC
+CoordOn
+GridOff
+AxesOn BLACK
+LabelOff
+ExprOn
+BorderColor 4
+DetectAsymOn

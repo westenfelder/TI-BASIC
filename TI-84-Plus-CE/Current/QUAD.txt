@@ -1,0 +1,232 @@
+Lbl N
+PlotsOff 
+0→Xscl
+0→Yscl
+ClrTable
+IndpntAsk
+DependAuto
+GraphStyle(2,1)
+a+b
+StoreGDB GDB1:Full:Normal:a+b:CoordOff:GridOff:AxesOff:LabelOff:ExprOff:FnOff :ClrHome
+0→Xmin:94→Xmax:0→Ymax:­62→Ymin
+ClrHome:ClrDraw
+ClrHome
+
+
+Lbl M
+Menu("Quadratic Solver","AX²+BX+C=0",1,"(AX+B)(CX+D)=0",2,"A(X-H)²+K=0",3,"Quit",ZZ)
+
+
+Lbl 1
+ClrHome
+Disp "AX²+BX+C=0
+Input "A:",A
+Input "B:",B
+Input "C:",C
+If A=0
+Goto 1
+Goto M1
+
+
+Lbl 2
+ClrHome
+Disp "(AX+B)(CX+D)=0
+Input "A:",A
+Input "B:",B
+Input "C:",C
+Input "D:",D
+If AC=0
+Goto 2
+AC→E
+AD+CB→F
+BD→G
+E→A
+F→B
+G→C
+Goto M1
+
+
+Lbl 3
+ClrHome
+Disp "A(X-H)²+K=0"
+Input "A:",A
+Input "H:",H
+Input "K:",K
+If A=0
+Goto HK
+­2AH→B
+K+(B²/(4A))→C
+Goto M1
+
+
+Lbl M1
+B²-4AC→J
+(­B-√(J))/(2A)→N
+(­B+√(J))/(2A)→R
+{A,B,C}→⌊ABC
+If A=0:Goto AF
+If A<0:Then:­A→A:­B→B:­C→C:End
+ClrHome
+Line(0,­48,94,­48,BLACK
+Line(0,­56,94,­56,BLACK
+Line(41,­4,42,­5,BLACK
+Pxl-Off(5,41
+Pxl-Off(4,42
+Text(0,33,"Quadratic   Equation   Solver
+Text(150,0,"Disc = ",J
+Text(150,51+71,"Roots:
+If not(fPart(A) or fPart(B) or fPart(C
+Then
+gcd(gcd(A,abs(B)),gcd(abs(B),abs(C)→I:A/I→A:B/I→B:C/I→C:4→G:A→D:abs(B→E:abs(C→F
+If I≠1:Then:Text(45,round(2.8G+7,0),I,"(":G+4+4iPart(log(10I→G:End
+If A≠1
+Text(45,round(2.8G,0),D
+G+4iPart(log(10D→G
+Text(45,round(2.8G,0),"x
+Text(45,round(2.8(G+4),0),"    "
+Text(38,round(2.8(G+4),0),2
+G+8→G
+If E≠0:Then
+Text(45,round(2.8G,0),"+
+If B<0
+Text(45,round(2.8G,0),"-
+If E≠1
+Text(45,round(2.8(G+4),0),E
+G+4+4iPart(log(10E→G
+Text(45,round(2.8G,0),"x
+G+4→G
+End
+If F≠0:Then
+Text(45,round(2.8G,0),"+
+If C<0
+Text(45,round(2.8G,0),"-
+Text(45,round(2.8(G+4),0),F
+G+8+4iPart(log(F→G
+End
+If I≠1:Then:Text(45,round(2.8G,0),")":G+4→G:End
+Text(45,round(2.8G,0),"=  0
+Else
+Text(45,11,A,"X²+",B,"X+",C,"=  0
+End
+B²-4AC→J
+{N,R}→⌊X
+SortA(⌊X)
+Text(129,0,"x =
+Pxl-Off(51,0
+Pxl-Off(54,2
+15+27→G
+If J≥0:Goto T2
+Text(150,173,"2  Imaginary
+round(⌊X,7)→L₁
+real(L₁(1→T
+abs(imag(L₁(2→U
+For(θ,1,8
+If not(fPart((T*10^θ)/10))
+Goto T
+End
+
+
+Lbl T
+If T≠0
+4(T<0)+4(θ-1)+4iPart(log(10abs(T→G
+If G>32:32→G
+15+G+2(fPart(T)≠0→G
+abs(imag(L₁(2→U
+Text(129,31,"
+If T≠0
+Text(129,31,T
+If B=0:15→G
+Text(129,round(2.8G,0),"+    ",U,"  
+Line(G,­54,G+2,­54,BLACK
+
+
+Lbl T2
+If J=0:Then
+Text(150,173,"1  Real
+Text(129,31,⌊X(1)
+End
+If J>0
+Then
+Text(150,173,"2  Real
+Text(129,31,⌊X(1),"  ,  ",⌊X(2)
+End
+abs(J→K:int(√(K→P:­1→S
+If fPart(B) or fPart(J) or fPart(2A) or K=0:Then
+Text(87,67,"Can't Simplify
+Goto D1
+End
+If fPart(K/2) and not(fPart(P/2):Then:P+1→P:­2→S:End
+For(C,P,2,S
+If not(fPart(K/C²
+Goto QY
+getKey→θ
+If θ=45:Goto DD
+End
+
+
+Lbl QY
+B→W
+gcd(gcd(abs(W),C),gcd(C,2A)→I
+W/I→W:C/I→X:K/C²→Y:2A/I→Z
+29→V:If Z=1:33→V:91→G
+Text(87,67,"                                                 "
+If K/C²≠1
+Then
+95-4iPart(log(10Y→G
+Text(round(2.63V,0),round(2.8G,0),Y
+G-4→G
+Line(G,­V-3,G+2,­V-5,BLACK
+Line(G+2,­V-4,G+2,­V,BLACK
+Line(G+2,­V+1-1,93,­V+1-1,BLACK
+G-4→G
+End
+If J<0:Then:Text(round(2.63V,0),round(2.8G,0),"":G-4→G:End
+If (X=1 and Y=1) or X≠1
+Then
+G-4iPart(log(X→G
+Text(round(2.63V,0),round(2.8G,0),X
+G-4→G
+End
+Text(round(2.63V,0),round(2.8G+1,0),"+
+Line(G,­V-5,G+2,­V-5,BLACK
+G-4→G
+If W≠0:Then
+G-4iPart(log(abs(W)))-4(­W<0)→G
+Text(round(2.63V,0),round(2.8G,0),­W
+G-4→G
+End
+If Z≠1:Then
+Line(G-1,­36,94,­36,BLACK
+int((95-G-4iPart(log(Z)))/2)+G→D
+Text(97,round(2.8D,0),Z
+End
+Text(87,round(2.8(G-10),0),"x
+Text(87,round(2.8(G-5),0),"=
+
+
+Lbl D1
+⌊ABC(1→A:⌊ABC(2→B:⌊ABC(3→C
+Pause 
+RecallGDB GDB1
+­B/(2A)→E
+(4AC-B²)/(4A)→F:A/4→P
+ClrHome
+ClrList L₁
+
+
+Lbl ZZ
+4→XFact
+4→YFact
+FnOff 
+ExprOff
+ClrHome
+CoordOn
+AxesOn 
+10→Xmax
+­10→Xmin
+10→Ymax
+­10→Ymin
+1→Xscl
+1→Yscl
+PlotsOff 
+Stop
